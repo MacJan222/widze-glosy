@@ -26,35 +26,106 @@
 <div id="svg_wrap"></div>
 
 <!--h1,h2,h3... to nagłówki na stronie, z kolei p to zwykły mały tekst-->
- <h1>Online Application</h1>
+ <h2>Analiza powiązań emocji i dzwięków z kolorami</h2>
 
  <!--Każda sekcja się zmienia po kliknięciu buttonu "Dalej"-->
  <section> 
-  <h2>Sekcja 1</h2>
-  <p>Wstęp</p>
-  <input type="text" placeholder="Firstname" />
-  <input type="text" placeholder="Surname" />
+  <h3>Dzień dobry,</h3>
+  <p> jesteśmy studentami II stopnia na Politechnice Gdańskiej i realizujemy projekt badawczy <b>Analiza powiązań pomiędzy brzmieniem głosu i kolorem przypisanym do próbki głosowej mówcy/śpiewu</b>. 
+    <br><br>
+    Zbieramy informacje o tym, jakie skojarzenia emocji i dzwięków z kolorami mają osoby o różnych charakterystykach.
+    <br><br>
+    Dana ankieta nie zajmie więcej niż 3 minuty, a pytania są anonimowe, łatwe i przyjemne :)
+    <br><br>
+    Więc serdecznie zapraszamy do jej wypełnienia ❤️</p>
 </section>
 
 <section>
   <h2>Sekcja 1</h2>
-  <p>Personal information</p>
+  <h2>Informacje ankietowanego</h2>
+  <br>
   <!--tutaj dajemy labele na to, żeby użytkownik mógł wprowadzić swoje dane, type="text" czyli użytkownik w tym labelu powinien napisać tekst, 
     placeholder - tekst domyślny, ten który znika jak my klikniemy na label i zaczniemy pisać sami-->
-  <input type="text" placeholder="Firstname" />
-  <input type="text" placeholder="Surname" />
-  <input type="text" placeholder="Birthdate" />
-  <input type="text" placeholder="Insurance number" />
-  <input type="text" placeholder="Family status" />
+  <h3>Proszę zaznaczyć swoją płeć</h3>
+  <hr>
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="sex1" name="sex" value="m">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="sex1">Mężczyzna</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="sex2" name="sex" value="f">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="sex2">Kobieta</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="sex3" name="sex" value="o">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="sex3">Inne</div>
+  </label>
+
+  <br>
+
+  <h3>Proszę zaznaczyć swoją grupę wiekową</h3>
+  <hr>
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="age1" name="age" value="20">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="age1">0 - 20</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="age2" name="age" value="40">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="age2">21 - 40</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="age3" name="age" value="60">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="age3">41 - 60</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" id="age4" name="age" value="80">
+    <div class="rad-design"></div>
+    <div class="rad-text" for="age4">60+</div>
+  </label>
+
+  <br>
+  <h3>Ew jakieś inne pytania...</h3>
+  <hr>
+<!--<br>
+  <p>Proszę zaznaczyć swoją grupę wiekową</p>
+  <input type="radio" id="age1" name="age" value="20">
+  <label for="age1">0 - 20</label><br>
+  <input type="radio" id="age2" name="age" value="40">
+  <label for="age2">21 - 40</label><br>  
+  <input type="radio" id="age3" name="age" value="60">
+  <label for="age3">41 - 60</label><br>
+  <input type="radio" id="age4" name="age" value="100">
+  <label for="age4">60+</label>-->
+
 </section>
 
 <section>
   <h2>Sekcja 2</h2>
-  <p>Address</p>
-  <input type="text" placeholder="Street, nbr" />
-  <input type="text" placeholder="City" />
-  <input type="text" placeholder="Postcode" />
-  <input type="text" placeholder="Country" />
+  <h2>Powiązanie emocji z kolorami</h2>
+  <br>
+
+  <h3>Radość to kolor...</h3>
+  <br>
+
+  <h3>Z jakim kolorem kojarzą Ci się emocje w tej ścieżce dzwiękowej?</h3>
+  <audio src="audio_emoji/Goblin.mp3" controls></audio>
+  <!--<audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>-->
+<hr>
 </section>
 
 <section>
@@ -76,9 +147,14 @@
 </section>
 
 <!--Definiujemy 3 buttony z których będziemy korzystać-->
-<div class="button" id="prev">&larr; Previous</div>
-<div class="button" id="next">Next &rarr;</div>
+<div class="button" id="prev">&larr; </div> <!--przed </div> można wpisać nazwę przycisku-->
+<div class="button" id="next"> &rarr;</div>
 <div class="button" id="submit">Agree and send application</div>
 
   </body>
 </html>
+
+
+
+
+

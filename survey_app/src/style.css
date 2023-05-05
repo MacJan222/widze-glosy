@@ -19,13 +19,22 @@ body {
   user-select: none;
 }
 
-h1{
+h2{
   font-weight:400;
   padding-top:0;
   margin-top:0;
   color: white;
   font-family: 'Roboto Slab', serif;
 }
+
+h3{
+  font-weight:400;
+  padding-top:0;
+  margin-top:0;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto Slab', serif;
+}
+
 
 #svg_form_time {
   height: 15px;
@@ -56,11 +65,12 @@ h1{
 }
 
 section {
+  text-align: left;
   padding: 50px ;
-  max-width: 300px;
+  max-width: 500px;
   margin: 30px auto;
   background:white;
-  background:rgba(255, 255, 255, 0.493);
+  background:rgba(255, 255, 255, 0.664);
   backdrop-filter:blur(10px);
   box-shadow:0px 2px 10px rgba(0,0,0,0.3);
   border-radius:5px;
@@ -68,7 +78,7 @@ section {
 }
 
 
-input {
+input[type=text] {
   width: 100%;
   margin: 7px 0px;
   display: inline-block;
@@ -85,3 +95,73 @@ p{
   text-align:justify;
 margin-top:0;
 }
+
+
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 8px 8px;
+  margin: 5px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(152, 100%, 90%, 0.14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(152, 68%, 96%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 33%);
+  margin-left: 14px;
+  /*letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 900;*/
+  font-size: 14px;
+  font-family: inherit;
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 0%);
+}
+
