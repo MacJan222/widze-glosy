@@ -1,0 +1,650 @@
+/*CSS OD STRONKI OGÓLNIE*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
+
+html {
+  height: 100%;
+  min-height:800px;
+}
+/* TO JEST TO PIERWSZE BODY DO STRONY, NA RAZIE KORZYSTAMY Z TEGO DRUGIEGO CO JEST NIŻEJ
+body {
+  background: url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529');
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align: center;
+ font-family: 'Noto Sans', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}*/
+
+
+h2{
+  font-weight:400;
+  padding-top:0;
+  margin-top:0;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto Slab', serif;
+}
+
+.header-name {
+  text-shadow: 2px 1px 2px rgb(255, 255, 255) ; /*TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
+}
+
+
+h3{
+  font-weight:400;
+  padding-top:0;
+  margin-top:0;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto Slab', serif;
+}
+
+
+p{
+  text-align:justify;
+  margin-top:0;
+  color: rgb(31, 31, 31);
+  font-family: 'Roboto Slab', serif;
+}
+
+#svg_form_time {
+  height: 15px;
+  max-width: 80%;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+#svg_form_time circle,
+#svg_form_time rect {
+  fill: rgb(255, 255, 255);
+}
+
+.button {
+  background: rgb(0, 170, 105);
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+}
+
+.disabled {
+  display:none;
+}
+
+section {
+  text-align: left;
+  padding: 50px ;
+  max-width: 500px;
+  margin: 30px auto;
+  background:white;
+  background:rgba(255, 255, 255, 0.664);
+  backdrop-filter:blur(10px);
+  box-shadow:0px 2px 10px rgba(0,0,0,0.3);
+  border-radius:5px;
+  transition:transform 0.2s ease-in-out;
+}
+
+
+input[type=text] {
+  width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+  background:white;
+}
+
+
+/*CSS OD RADIO BUTTONÓW*/
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 8px 8px;
+  margin: 5px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(152, 100%, 90%, 0.14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background: linear-gradient(to right bottom, hsl(36, 100%, 70%), hsl(261, 97%, 62%)); /*KOLORKI PRZYCISKÓW - GRADIENT W SEKCJI 1*/
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(152, 68%, 96%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 33%);
+  margin-left: 14px;
+  /*letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 900;*/
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 0%);
+}
+
+
+
+
+/*CSS OD KOLORKÓW*/
+
+body {
+  background: #ffffff; /*DOMYŚLNE TŁO APKI*/
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  /*display: flex; SPRAWIA ŻE STRZAŁKI SĄ DUGIE*/ 
+  flex-direction: column;
+  height: 100%;
+  /*overflow: hidden; TUTAJ BYŁ SCHOWANY SUWACZEK*/
+  transition: 0.3s;
+  /*background: url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529');
+  EWENTUALNIE URL DO BACKGROUNDA*/
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+:before,
+:after,
+div {
+  box-sizing: border-box;
+}
+
+/* NA RAZIE NIE POTRZEBUJEMY PAHE HEADERÓW
+.page-header {
+  font-size: 2.4em;
+  text-align: center;
+  z-index: 99;
+}
+.page-header h1 {
+  display: inline-block;
+  font-size: 58px;
+  border-bottom: 3px solid #fff;
+  color: #ffffff;
+  line-height: 1.1;
+}
+.page-header h1 span {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.page-content {
+  padding: 0 2em;
+}*/
+
+
+.page-footer {
+  flex-grow: 1;
+}
+.controls {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.color-picker-container {
+  display: flex;
+}
+
+.choose_color_button1{
+  background: rgb(224, 224, 224);
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 20px;
+  width: 90px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-size: smaller;
+  text-align: center;
+  margin-right: 5px;
+}
+.choose_color_button2{
+  background: rgb(224, 224, 224);
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 20px;
+  width: 90px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-size: smaller;
+  text-align: center;
+  margin-right: 5px;
+}
+.choose_color_button3{
+  background: rgb(224, 224, 224);
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 20px;
+  width: 90px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-size: smaller;
+  text-align: center;
+}
+
+.card {
+  width: 40vmin;
+  height: 11vmin;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /*box-shadow: 0 0 0 100em rgba(34, 34, 34, 0), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
+  border-radius: 3px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
+  min-width: 400px;/*żeby nie zmniejszał się box*/
+  min-height: 110px;
+}
+.card .spacer {
+  flex-grow: 1;
+  background: white;
+  box-shadow: 0 1px 0 0 white;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.card .image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.card .image-container > img {
+  position: relative;
+  z-index: 99;
+}
+.card .image-container img {
+  display: block;
+  width: 100%;
+}
+.card .image-container .color-name {
+  position: absolute;
+  z-index: 999;
+  /*color: #555;*/
+  width: 100%;
+  bottom: 8%;
+  text-align: center;
+}
+.card .image-container .shading-container img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card .image-container .shading-container .gradient {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #3c4144 0%, #535a5e 32%, rgba(105, 113, 119, 0.41) 50%, rgba(105, 113, 119, 0) 73%, rgba(105, 113, 119, 0.18) 100%);
+  opacity: 0.2;
+}
+.color-picker {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+  transition: 0.4s;
+  /*background: rgba(85, 85, 85, 0.2);/*BOX W KTÓRYM SĄ KÓŁECZKA, TEN KWADRATOWY DUŻY*/
+  
+
+
+}
+.color-picker div[class^="swatch-"],
+.color-picker div[class*=" swatch-"] {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 4px;
+  padding: 0;
+  position: relative;
+}
+.color-picker div[class^="swatch-"]:hover li,
+.color-picker div[class*=" swatch-"]:hover li {
+  opacity: 1!important;
+}
+.color-picker div[class^="swatch-"] > ul,
+.color-picker div[class*=" swatch-"] > ul {
+  transition: 0.2s;
+  z-index: 99;
+  position: absolute;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  left: -4px;
+  top: -112px;
+}
+.color-picker div[class^="swatch-"] > ul:hover,
+.color-picker div[class*=" swatch-"] > ul:hover {
+  z-index: 999;
+}
+.color-picker div[class^="swatch-"] > ul > li,
+.color-picker div[class*=" swatch-"] > ul > li {
+  height: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 4px;
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.3);/*DOMYŚLNIE PODŚWIETLONE KÓŁECZKA*/
+  display: block;
+  background: pink;
+  opacity: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+/* TO JEST DO ŁĄDNIEJSZYCH NAZW KOLORÓW, JAK NAJEŻDŻASZ NA POSZCZEGÓLNE KOLORKI
+.color-picker div[class^="swatch-"] > ul > li:after,
+.color-picker div[class*=" swatch-"] > ul > li:after {
+  position: absolute;
+  left: 60px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.7);/*POLE OBOK NAZWY KOLORÓW
+  color: white; /*NAZWY KOLORÓW OBOK SUWAKA
+  font-size: 13px;
+  content: attr(data-tooltip);
+  opacity: 0;
+  transform: translateX(-5px);
+  white-space: nowrap;
+  padding: 4px 10px 5px;
+  transition: 0.2s;
+  top: 14px;
+  font-family: sans-serif;
+  pointer-events: none;
+}*/
+
+
+.color-picker div[class^="swatch-"] > ul > li:hover,
+.color-picker div[class*=" swatch-"] > ul > li:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);/*SHADOW WOKÓŁ KÓŁECZEK Z KOLORKAMI*/
+}
+.color-picker div[class^="swatch-"] > ul > li:hover:after,
+.color-picker div[class*=" swatch-"] > ul > li:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+}
+.color-picker div[class^="swatch-"] > ul > li:active,
+.color-picker div[class*=" swatch-"] > ul > li:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);/*SHADOW WOKÓŁ KÓŁEK PO NACIŚNIĘCIU NA NIE*/
+}
+.color-picker div[class^="swatch-"] > ul > li.centered,
+.color-picker div[class*=" swatch-"] > ul > li.centered {
+  opacity: 1;
+}
+.color-picker div[class^="swatch-"] > ul > li.active,
+.color-picker div[class*=" swatch-"] > ul > li.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-white.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.color-picker .swatch-k .subswatch-1 {
+  background: #f7f7f7;/*ZACZYNAJĄ SIĘ KOLORY W KÓŁKACH, PIERWSZY BIAŁY, DRUGI SZARY ITP*/
+}
+.color-picker .swatch-k .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-k .subswatch-2 {
+  background: #b7b7b7;
+}
+.color-picker .swatch-k .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-k .subswatch-3 {
+  background: #767676; /*#777777,  #373737;*/
+}
+.color-picker .swatch-k .subswatch-4 {
+  background: #000000;
+   
+}
+/*.color-picker .swatch-k .subswatch-5 {
+  background: #000000;
+}*/
+.color-picker .swatch-ro .subswatch-1 {
+  background: #ffbbc0;
+}
+.color-picker .swatch-ro .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ro .subswatch-2 {
+  background: #ff5562;
+}
+.color-picker .swatch-ro .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ro .subswatch-3 {
+  background: #ee0012;
+}
+.color-picker .swatch-ro .subswatch-4 {
+  background: #88000a;
+}
+/*.color-picker .swatch-ro .subswatch-5 {
+  background: #220003;
+}*/
+.color-picker .swatch-or .subswatch-1 {
+  background: #ffe6ca;
+}
+.color-picker .swatch-or .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-or .subswatch-2 {
+  background: #feb765;
+}
+.color-picker .swatch-or .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-or .subswatch-3 {
+  background: #fb8802;
+}
+.color-picker .swatch-or .subswatch-4 {
+  background: #965101;
+}
+/*.color-picker .swatch-or .subswatch-5 {
+  background: #311a00;
+}*/
+.color-picker .swatch-ga .subswatch-1 {
+  background: #fff6cb;
+}
+.color-picker .swatch-ga .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ga .subswatch-2 {
+  background: #fee566;
+}
+.color-picker .swatch-ga .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ga .subswatch-3 {
+  background: #fdd401;
+}
+.color-picker .swatch-ga .subswatch-4 {
+  background: #977f01;
+}
+/*.color-picker .swatch-ga .subswatch-5 {
+  background: #322a00;
+}*/
+.color-picker .swatch-ve .subswatch-1 {
+  background: #d9f0c9;
+}
+.color-picker .swatch-ve .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ve .subswatch-2 {
+  background: #a1d979;
+}
+.color-picker .swatch-ve .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-ve .subswatch-3 {
+  background: #6bb834;
+}
+.color-picker .swatch-ve .subswatch-4 {
+  background: #3d691e;
+}
+/*.color-picker .swatch-ve .subswatch-5 {
+  background: #0f1907;
+}*/
+.color-picker .swatch-al .subswatch-1 {
+  background: #d6dff6;
+}
+.color-picker .swatch-al .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-al .subswatch-2 {
+  background: #829de4;
+}
+.color-picker .swatch-al .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-al .subswatch-3 {
+  background: #2e5bd2;
+}
+.color-picker .swatch-al .subswatch-4 {
+  background: #1c377e;
+}
+/*.color-picker .swatch-al .subswatch-5 {
+  background: #09122b;
+}*/
+.color-picker .swatch-vi .subswatch-1 {
+  background: #e4c0ef;
+}
+.color-picker .swatch-vi .subswatch-1.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-vi .subswatch-2 {
+  background: #c16fda;
+}
+.color-picker .swatch-vi .subswatch-2.active {
+  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
+}
+.color-picker .swatch-vi .subswatch-3 {
+  background: #952fb4;
+}
+.color-picker .swatch-vi .subswatch-4 {
+  background: #521a63;
+}
+/*.color-picker .swatch-vi .subswatch-5 {
+  background: #0f0512;
+}*/
+.color-picker .main-swatches {
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+
+/*BEZ TEGO NA RAZIE TEŻ DZIAŁA, TO JEST ŁADNIEJSZE PRZEJŚCIE W INNY KOLOR, TAKIE ROZSZERZAJĄCE SIĘ KÓŁECZKO*/
+/*
+.ripple {
+  position: absolute;
+  left: -300em;
+  transform: translateX(-50%) translateY(-50%) scale(0.1);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+.ripple.scaling {
+  -webkit-animation: scale 1.4s;
+          animation: scale 1.4s;
+}
+@-webkit-keyframes scale {
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(7);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) scale(7);
+  }
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+*/
