@@ -20,6 +20,11 @@ body {
   user-select: none;
 }*/
 
+@media only screen and (max-width: 500px) {
+  html {
+    min-width: 400px;
+  }
+}
 
 h2{
   font-weight:400;
@@ -51,15 +56,17 @@ p{
 }
 
 #svg_form_time {
-  height: 15px;
+  height: 20px;
   max-width: 80%;
   margin: 40px auto 20px;
   display: block;
+  overflow: visible;
 }
 
 #svg_form_time circle,
 #svg_form_time rect {
   fill: rgb(255, 255, 255);
+  filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5)); /*CIEŃ DLA KÓŁECZEK CZERWONYCH NA GÓRZE*/
 }
 
 .button {
@@ -138,7 +145,7 @@ input[type=text] {
   width: 22px;
   height: 22px;
   border-radius: 100px;
-  background: linear-gradient(to right bottom, hsl(36, 100%, 70%), hsl(261, 97%, 62%)); /*KOLORKI PRZYCISKÓW - GRADIENT W SEKCJI 1*/
+  background: linear-gradient(to right bottom, hsla(152, 100%, 90%, 0.14), hsla(221, 95%, 61%, 0.432)); /*KOLORKI PRZYCISKÓW - GRADIENT W SEKCJI 1*/
   position: relative;
 }
 
@@ -248,7 +255,51 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0px;
+  align-items: center;
+  margin-left: 65px;
+  margin-right: 65px;
 }
+
+
+audio {
+  width: 300px;
+  height: 55px;
+  /*background-color: #ffffff;*/
+  background-color: rgba(240, 240, 240, 0.26);
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  opacity: 0.7;
+}
+
+audio:focus {
+  outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+  /*background-color: rgb(241, 241, 241);*/
+  border-radius: 20px;
+}
+
+
+.reset_color{
+  background:  rgb(255, 85, 85);
+  border-radius: 10%;
+  /*border: 0.5px solid #000000;*/
+  padding-top: 14px;
+  padding-left: 2px;
+  width: 50px;
+  height: 50px;
+  color: #000000;
+  font-size: smaller;
+  text-align: center;
+  margin-right: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  margin-left: 65px;
+}
+
 
 
 .color-picker-container {
@@ -256,11 +307,11 @@ div {
 }
 
 .choose_color_button1{
-  background: rgb(224, 224, 224);
-  border-radius: 25px;
-  border: 2px solid #000000;
+  background:  rgb(241, 241, 241);
+  border-radius: 100%;
+  /*border: 0.5px solid #000000;*/
   padding: 20px;
-  width: 90px;
+  width: 80px;
   height: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -268,13 +319,14 @@ div {
   font-size: smaller;
   text-align: center;
   margin-right: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 .choose_color_button2{
-  background: rgb(224, 224, 224);
-  border-radius: 25px;
-  border: 2px solid #000000;
+  background: rgb(241, 241, 241);;
+  border-radius: 100%;
+  /*border: 1px solid #000000;*/
   padding: 20px;
-  width: 90px;
+  width: 80px;
   height: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -282,19 +334,21 @@ div {
   font-size: smaller;
   text-align: center;
   margin-right: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 .choose_color_button3{
-  background: rgb(224, 224, 224);
-  border-radius: 25px;
-  border: 2px solid #000000;
+  background: rgb(241, 241, 241);
+  border-radius: 100%;
+  /*border: 1px solid #000000;*/
   padding: 20px;
-  width: 90px;
+  width: 80px;
   height: 80px;
   margin-left: auto;
   margin-right: auto;
   color: #000000;
   font-size: smaller;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .card {
@@ -360,9 +414,6 @@ div {
   padding: 2em 0;
   transition: 0.4s;
   /*background: rgba(85, 85, 85, 0.2);/*BOX W KTÓRYM SĄ KÓŁECZKA, TEN KWADRATOWY DUŻY*/
-  
-
-
 }
 .color-picker div[class^="swatch-"],
 .color-picker div[class*=" swatch-"] {

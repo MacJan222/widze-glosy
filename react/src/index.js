@@ -33,6 +33,51 @@ $( document ).ready(function() {
   var base_color = "rgb(230,230,230)"; // KOLOR NIEWYPEŁNIONYCH KÓŁECZEK NA GÓRZE
   var active_color = "rgb(237, 40, 70)"; // zielony od buttonów: 0, 170, 105     KOLOR WYPEŁNIONYCH NA CZERWONO KÓŁECZEK NA GÓRZE
 
+  var counter = 0;
+  var rows = 0;
+  var questionsAmount = 10;
+
+  var outputVector = [];
+
+// Fill the matrix with elements
+
+$('.rad-input[name="sex"]').on('change', function() {
+  var selectedSex = $('input[name="sex"]:checked').val();
+  outputVector[0] = selectedSex;
+  //console.log('Selected sex: ' + selectedSex);
+  console.log('outputVector: ' + outputVector);
+
+});
+
+$('.rad-input[name="age"]').on('change', function() {
+  var selectedAge = $('input[name="age"]:checked').val();
+  outputVector[1] = selectedAge;
+  //console.log('Selected age: ' + selectedAge);
+});
+
+var colorsMatrix = [
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"]
+];
+
+
+ /* $('#decrement').click(function() {
+    if (counter > 1) {
+      counter--;
+      updateCounter();
+    }
+  });*/
+
+
+
 
   //TA FUNKCJA JEST OD KOLORKÓW
   $('li[class^="subswatch-"],li[class*=" subswatch-"]').click(function() {
@@ -48,13 +93,13 @@ $( document ).ready(function() {
     var rippleOriginLeft = selectedOffset.left - cardOffset.left + (selectedSwatch.outerWidth() / 2);
     var newParentOffset = -(((selectedSwatchNumber - 1) * 54) + 4);
   
-    console.log(selectedSwatchNumber);
-    console.log(newParentOffset);
+    //console.log(selectedSwatchNumber);
+    //console.log(newParentOffset);
   
     $('.color-picker .active').removeClass('active');
 
     //BOX NA KOLORKI
-    document.getElementById("colored_box").style.backgroundColor = selectedColor;
+    //document.getElementById("colored_box").style.backgroundColor = selectedColor;
 
     selectedSwatchParent.css("top", newParentOffset);
     selectedSwatchParent.find('.centered').removeClass('centered');
@@ -66,12 +111,31 @@ $( document ).ready(function() {
     }).addClass('scaling');
   
     setTimeout(function() {
-      $('.color-picker').css({
+      /*$('.color-picker').css({
         backgroundColor: selectedColor
-      });
-      $('.choose_color_button').css({
-        backgroundColor: selectedColor
-      });
+      });*/
+
+      if(counter === 1){
+        counter++;  
+        colorsMatrix[rows][0] = selectedColor;
+        $('.choose_color_button1').css({
+          backgroundColor: colorsMatrix[rows][0]
+        });              
+      }
+      else if (counter === 2){
+        counter++;
+        colorsMatrix[rows][1] = selectedColor;
+        $('.choose_color_button2').css({
+          backgroundColor: colorsMatrix[rows][1]
+        });
+      }
+      else if(counter === 3){
+        counter = 1;
+        colorsMatrix[rows][2] = selectedColor;
+        $('.choose_color_button3').css({
+          backgroundColor: colorsMatrix[rows][2]
+        });
+      }
       $('body').css({
         backgroundColor: selectedColor
       });
@@ -111,7 +175,7 @@ $( document ).ready(function() {
     var positionX = 12 + i * 200;
     var rect = makeSVG("rect", { x: positionX, y: 9, width: 200, height: 6 });
     document.getElementById("svg_form_time").appendChild(rect);
-    // <g><rect x="12" y="9" width="200" height="6"></rect></g>'
+     <g><rect x="12" y="9" width="200" height="6"></rect></g>//CO TO?
     var circle = makeSVG("circle", {
       cx: positionX,
       cy: 12,
@@ -135,11 +199,28 @@ $( document ).ready(function() {
   $('#svg_form_time circle').css('fill',base_color);
   $("circle:nth-of-type(1)").css("fill", active_color);
   
-  $(".card").click(function () {
-  });  
 
+  //RESETUJEMY KOLORKI na jednej stronie
+  $(".reset_color").click(function () {
+    document.querySelectorAll('audio').forEach(el => el.pause());
+    document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
 
+    counter = 1;
+    colorsMatrix[rows][0] = "hsla(0, 0%, 60%, 0.14)";
+    colorsMatrix[rows][1] = "hsla(0, 0%, 60%, 0.14)";
+    colorsMatrix[rows][2] = "hsla(0, 0%, 60%, 0.14)";
+    document.body.style.backgroundColor = "white";
 
+    $('.choose_color_button1').css({
+      backgroundColor: colorsMatrix[rows][0]
+    });
+    $('.choose_color_button2').css({
+      backgroundColor: colorsMatrix[rows][1]
+    });
+    $('.choose_color_button3').css({
+      backgroundColor: colorsMatrix[rows][2]
+    });
+  });
 
 
   //TUTAJ JEST LOGIKA BUTTONÓW
@@ -152,10 +233,10 @@ $( document ).ready(function() {
 
     document.body.style.backgroundColor = "white";
 
-    $('.color-picker').css({
+    /*$('.color-picker').css({
       backgroundColor: "white"
-    });
-    
+    });*/
+
     //document.body.style.backgroundImage = "url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529')";
 
     var id = $(this).attr("id");
@@ -166,6 +247,10 @@ $( document ).ready(function() {
         $('#submit').removeClass("disabled"); // wyzwolić jeśli przeszedłeś wszystkie pytania
       }
       if (child <= length) {
+        if (child > 2 && child < questionsAmount + 2){
+          counter = 1;
+          rows++;
+        }
         child++;
       }
 
@@ -176,9 +261,28 @@ $( document ).ready(function() {
         $(this).addClass("disabled");
       }
       if (child > 1) {
+        if (child > 3 && child < questionsAmount +3){
+          counter = 1;
+          rows--;
+        }
         child--;
       }
+
+      
     }
+    counter = 1;
+    $('.choose_color_button1').css({
+      backgroundColor: colorsMatrix[rows][0]
+    });
+    $('.choose_color_button2').css({
+      backgroundColor: colorsMatrix[rows][1]
+    });
+    $('.choose_color_button3').css({
+      backgroundColor: colorsMatrix[rows][2]
+    });
+    //console.log("this is a colorsMatrix:" + colorsMatrix[rows][0]);
+    
+    outputVector[2] = colorsMatrix;
 
     var circle_child = child + 1;
     $("#svg_form_time rect:nth-of-type(n + " + child + ")").css(
@@ -197,16 +301,5 @@ $( document ).ready(function() {
     currentSection.nextAll('section').css('transform','translateX(100px)');
     $('section').not(currentSection).hide();
   });
-
-
-  //LOGIKA BUTTONÓW WYBIERZ KOLOR
-
-  /*$(".choose_color_button").click(function () {
-    var id = $(this).attr("id");
-    if (id === "c_color") {
-      $("#colored_box").removeClass("disabled");
-    } 
-  });*/
-  
   
 });
