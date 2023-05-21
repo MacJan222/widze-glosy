@@ -14,9 +14,7 @@ function AudioSection({questions}) {
     <section id = "questions"> {/*domyślnie jest section class="page-content"*/}
         <div className="container">
          <div className="row">
-          {/*{questions.map(question => (*/}
             <div key={questions.id}>
-
             <h2>{questions.section}</h2>
             <h2>{questions.section_name}</h2>
             <br />  
@@ -31,32 +29,22 @@ function AudioSection({questions}) {
               <div className="reset_color" id="c_reset">Reset</div>
             </div>
             <br/>
-            
-            <br />{/*!!!!!!!!!!!!!!OGARNĄĆ ŻEBY KOLORKI NIE PRZESZKADZAŁY W PAUZOWANIU*/}
-            {/*<div className = "rect" id = "colored_rect">This is a rectangle!</div>*/}
-            <br />
             <div className="color-picker-container">
-              <div className="choose_color_button1" id="c_color1"></div>
-              <div className="choose_color_button2" id="c_color2"></div>
-              <div className="choose_color_button3" id="c_color3"></div>
+              <div className="choose_color_button1" id="c_color1">Click</div>
+              <div className="choose_color_button2" id="c_color2">Click</div>
+              <div className="choose_color_button3" id="c_color3">Click</div>
             </div>
-            <div id="counter"></div>
-            <br />
-            <ColorPicker />
-            {/*<div>
-            
-              <button onClick={toggleDivVisibility}>Toggle</button>
-              {isDivVisible &&  <ColorPicker />}
-            </div>}*/}
-            
-                  
-            <br />
+            <div id="counter"></div>            <br />
+            <div className = "ccccc">
+              <ColorPicker />
+            </div>
             <hr />
+            <div className="dialog">
+               Należy wybrać co najmniej jeden kolor aby przejść dalej.
             </div>
-          {/*))}*/}
+            </div>
         </div>
-      </div>
-      
+      </div>      
     </section>
   );
 }
