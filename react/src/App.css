@@ -98,6 +98,13 @@ section {
   transition:transform 0.2s ease-in-out;
 }
 
+.dialog{
+  text-align:justify;
+  margin-top:0;
+  color: rgb(255, 50, 60);
+  font-family: 'Roboto Slab', serif;
+}
+
 
 input[type=text] {
   width: 100%;
@@ -151,12 +158,10 @@ input[type=text] {
 
 .rad-design::before {
   content: '';
-
   display: inline-block;
   width: inherit;
   height: inherit;
   border-radius: inherit;
-
   background: hsl(152, 68%, 96%);
   transform: scale(1.1);
   transition: .3s;
@@ -285,7 +290,7 @@ audio::-webkit-media-controls-panel {
 
 
 .reset_color{
-  background:  rgb(255, 85, 85);
+  background:  rgb(241, 241, 241);
   border-radius: 10%;
   /*border: 0.5px solid #000000;*/
   padding-top: 14px;
@@ -296,8 +301,9 @@ audio::-webkit-media-controls-panel {
   font-size: smaller;
   text-align: center;
   margin-right: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0px 10px rgba(255, 86, 86, 0.35);
   margin-left: 65px;
+  cursor: pointer;
 }
 
 
@@ -320,6 +326,8 @@ audio::-webkit-media-controls-panel {
   text-align: center;
   margin-right: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 .choose_color_button2{
   background: rgb(241, 241, 241);;
@@ -335,6 +343,8 @@ audio::-webkit-media-controls-panel {
   text-align: center;
   margin-right: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 .choose_color_button3{
   background: rgb(241, 241, 241);
@@ -349,6 +359,8 @@ audio::-webkit-media-controls-panel {
   font-size: smaller;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 
 .card {
@@ -358,10 +370,11 @@ audio::-webkit-media-controls-panel {
   position: relative;
   display: flex;
   flex-direction: column;
-  /*box-shadow: 0 0 0 100em rgba(34, 34, 34, 0), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
+  box-shadow: 0 0 0 100em rgba(34, 34, 34, 0.384), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
   border-radius: 3px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
   min-width: 400px;/*żeby nie zmniejszał się box*/
   min-height: 110px;
+  /*transition: opacity 0.3s;*/
 }
 .card .spacer {
   flex-grow: 1;
@@ -424,9 +437,10 @@ audio::-webkit-media-controls-panel {
   padding: 0;
   position: relative;
 }
+
 .color-picker div[class^="swatch-"]:hover li,
 .color-picker div[class*=" swatch-"]:hover li {
-  opacity: 1!important;
+  opacity: 1!important; 
 }
 .color-picker div[class^="swatch-"] > ul,
 .color-picker div[class*=" swatch-"] > ul {

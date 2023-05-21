@@ -52,6 +52,10 @@ function BasicInformation() {
             <div className="rad-design" />
             <div className="rad-text" htmlFor="age4">60+</div>
         </label>
+        <br/> 
+        <div className="dialog">
+               Proszę odpowiedzieć na pytania.
+        </div>
     </section>
   );
 }

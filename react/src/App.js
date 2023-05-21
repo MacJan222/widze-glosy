@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 
 import Header from './components/Header';
 import StudentsIntro from './components/StudentsIntro';
+import StudentsEnd from './components/StudentsEnd';
 import AudioSection from './components/AudioSection';
 import ColorPicker from './components/ColorPicker';
 import BasicInformation from './components/BasicInformation';
@@ -43,6 +44,7 @@ function App() {
       <AudioSection questions = {questions[9]}/>
 
       <Agreement />
+      {/*<StudentsEnd /> SUBMIT PRZEKIERUJE NA INNĄ STRONĘ StudentsEnd*/} 
 
         {/*Definiujemy 3 buttony z których będziemy korzystać*/}
         <div className="button" id="prev">← </div> {/*przed </div> można wpisać nazwę przycisku*/}
