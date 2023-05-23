@@ -4,6 +4,8 @@
 html {
   height: 100%;
   min-height:800px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* TO JEST TO PIERWSZE BODY DO STRONY, NA RAZIE KORZYSTAMY Z TEGO DRUGIEGO CO JEST NIŻEJ
 body {
@@ -20,13 +22,14 @@ body {
   user-select: none;
 }*/
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 800px) {
   html {
-    min-width: 500px;
+    min-width: 600px;
   }
   
   section {
-    max-width: 400px;
+    max-width: 600px;
+    min-height: 350px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -36,14 +39,57 @@ body {
   }
 
   .header-name {
+    scale: 1.4;
+  }
+
+  h2, h3, .rad-label {
     scale: 1.2;
     margin-left: 10%;
     margin-right: 10%;
   }
 
+  p, .color-picker-container, .reset_color, .audio-container {
+    scale: 1.2;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+  }
+  .color-picker {
+    scale: 1.3;
+    margin-top: 10%;
+  }
+
+  .rad-text {
+    font-size: 30px;
+  }
+
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 415px) and (max-width: 800px) {
+  html {
+    min-width: 400px;
+  }
+  
+  section {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+    
+  circle {
+    r: 30;
+  }
+
+  #svg_form_time {
+    padding-top: 5%;
+  }
+
+  .header-name {
+    padding: 0 5%;
+  }
+
+}
+
+@media only screen and (max-width: 415px) {
   html {
     max-width: 500px;
   }
@@ -58,12 +104,11 @@ body {
   }
 
   #svg_form_time {
-    margin-top: 5%;
     padding-top: 5%;
   }
 
   .color-picker {
-    scale: 0.70
+    scale: 0.77
   }
 
   .choose_color_button2 {
@@ -71,7 +116,7 @@ body {
     margin-left: 20px;
   }
 
-  h2, h3, audio, .reset_color, .color-picker-container {
+  h2, h3, p, audio, .reset_color, .color-picker-container {
     scale: 0.85;
   }
 }
@@ -140,7 +185,7 @@ p{
 
 section {
   text-align: left;
-  padding: 5%;
+  padding: 6%;
   margin-top: 10px;
   margin-bottom: 10px;
   width: auto;
@@ -174,8 +219,8 @@ input[type=text] {
   align-items: center;
 
   border-radius: 100px;
-  padding: 8px 8px;
-  margin: 5px 0;
+  padding: 3% 5%;
+  margin: 3%;
 
   cursor: pointer;
   transition: .3s;
