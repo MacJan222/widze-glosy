@@ -10,43 +10,52 @@ import BasicInformation from './components/BasicInformation';
 import Agreement from './components/Agreement';
 import ColorButton from './components/ColorButton';
 import { questions } from './questions/Questions';
+import { questions_english } from './questions/Questions_EN';
 
+import { text } from './text/Text';
+import { text_english } from './text/Text_EN';
+
+var updatedQuestions = questions;
 
 function App() {
 
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  var [ENGLISH, setENGLISH] = useState(updatedQuestions);
 
-  const handleNextItem = () => {
-    if (currentItemIndex <= questions.length - 1 )
-    {setCurrentItemIndex(currentItemIndex === questions.length - 1 ? 0 : currentItemIndex + 1);}
-  };
+    const PolandClick = () => {
+      updatedQuestions = questions;
+      setENGLISH(updatedQuestions);
+    };
+    const EnglandClick = () => {
+      updatedQuestions = questions_english;
+      setENGLISH(updatedQuestions);
+    };
 
-
+    
   return (
     <div>
-
       <Header />
+
+      <button id="poland" onClick={PolandClick}></button>
+      <button id="united-kingdom" onClick={EnglandClick}></button>
+      <br />
       <StudentsIntro/>
       <BasicInformation/>
 
       {/*TO JEST BARDZO NIEŁADNA METODA, NA KONIEC TRZEBA TO ZOPTYMALIZOWAĆ*/}
-      <AudioSection questions = {questions[0]}/>
-      <AudioSection questions = {questions[1]}/>
-      {/*{audioRef.current.pause()} TO TUTAJ*/}
-      <AudioSection questions = {questions[2]}/>
-      <AudioSection questions = {questions[3]}/>
-      <AudioSection questions = {questions[4]}/>
+      <AudioSection questions = {updatedQuestions[0]}/>
+      <AudioSection questions = {updatedQuestions[1]}/>
+      <AudioSection questions = {updatedQuestions[2]}/>
+      <AudioSection questions = {updatedQuestions[3]}/>
+      <AudioSection questions = {updatedQuestions[4]}/>
 
-      <AudioSection questions = {questions[5]}/>
-      <AudioSection questions = {questions[6]}/>
-      <AudioSection questions = {questions[7]}/>
-      <AudioSection questions = {questions[8]}/>
-      <AudioSection questions = {questions[9]}/>
+      <AudioSection questions = {updatedQuestions[5]}/>
+      <AudioSection questions = {updatedQuestions[6]}/>
+      <AudioSection questions = {updatedQuestions[7]}/>
+      <AudioSection questions = {updatedQuestions[8]}/>
+      <AudioSection questions = {updatedQuestions[9]}/>
 
       <Agreement />
       {/*<StudentsEnd /> SUBMIT PRZEKIERUJE NA INNĄ STRONĘ StudentsEnd*/} 
-
-        {/*Definiujemy 3 buttony z których będziemy korzystać*/}
         <div className="button" id="prev">← </div> {/*przed </div> można wpisać nazwę przycisku*/}
         <div className="button" id="next"> →</div>
         <div className="button" id="submit">Agree and send application</div>

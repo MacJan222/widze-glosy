@@ -9,18 +9,13 @@ import ColorPicker from './components/ColorPicker';
 import AudioSection from './components/AudioSection';
 import reportWebVitals from './reportWebVitals';
 import $ from 'jquery';
-//const $ = window.$;
+
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  
-);
-reportWebVitals();
 
 
 //TA FUNKCJA JEST OD WSZYSTKIEGO (TAK JAKBY OD STRONY I OD BUTTONÓW)
@@ -29,13 +24,14 @@ $( document ).ready(function() {
   var active_color = "rgb(237, 40, 70)"; // zielony od buttonów: 0, 170, 105     KOLOR WYPEŁNIONYCH NA CZERWONO KÓŁECZEK NA GÓRZE
   
   var isColorSelected = true;
-
   var counter = 0;
   var rows = 0;
   var questionsAmount = 10;
   var outputVector = [];
   var selectedSex = [];
   var selectedAge = [];
+
+
 
   $('.ccccc').hide();
   $('.dialog').hide();
@@ -50,6 +46,7 @@ $('.rad-input[name="age"]').on('change', function() {
   outputVector[1] = selectedAge;
   //console.log('outputVector: ' + selectedAge);
 });
+
 
 
 var colorsMatrix = [
@@ -81,7 +78,7 @@ var colorsMatrix = [
     var rippleOriginLeft = selectedOffset.left - cardOffset.left + (selectedSwatch.outerWidth() / 2);
     var newParentOffset = -(((selectedSwatchNumber - 1) * 54) + 4);
   
-    console.log(counter);
+    //console.log(counter);
     //console.log(newParentOffset);
   
     $('.color-picker .active').removeClass('active');
@@ -240,13 +237,8 @@ var colorsMatrix = [
     $('.ccccc').show();
   });
 
-  $(window).on('beforeunload', function () {
-    // Check if there is no selected color
-    if (!isColorSelected) {
-      return 'You have not selected a color. Are you sure you want to leave this page?';
-    }
-  });
-  
+
+
 
   //TUTAJ JEST LOGIKA BUTTONÓW
   $(".button").click(function () {
@@ -288,6 +280,7 @@ var colorsMatrix = [
         child++;
       }
 
+
     } else if (id === "prev") {
       $("#next").removeClass("disabled");
       $('#submit').addClass("disabled");
@@ -317,8 +310,8 @@ var colorsMatrix = [
       backgroundColor: colorsMatrix[rows][2],
       border: "0 4px 10px rgba(0, 0, 0, 0.35"
     });
-    console.log('outputVector: ' + selectedSex);
-    console.log('outputVector: ' + selectedAge);
+    //console.log('outputVector: ' + selectedSex);
+    //console.log('outputVector: ' + selectedAge);
     //console.log("this is a colorsMatrix:" + colorsMatrix[rows][0]);
     
     outputVector[2] = colorsMatrix;
@@ -341,4 +334,14 @@ var colorsMatrix = [
     $('section').not(currentSection).hide();
   });
   
+
 });
+
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  
+);
+reportWebVitals();

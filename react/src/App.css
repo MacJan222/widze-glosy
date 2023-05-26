@@ -5,20 +5,6 @@ html {
   height: 100%;
   min-height:800px;
 }
-/* TO JEST TO PIERWSZE BODY DO STRONY, NA RAZIE KORZYSTAMY Z TEGO DRUGIEGO CO JEST NIŻEJ
-body {
-  background: url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529');
-  background-size:cover;
-  background-repeat:no-repeat;
-  text-align: center;
- font-family: 'Noto Sans', sans-serif;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}*/
 
 @media only screen and (max-width: 500px) {
   html {
@@ -103,6 +89,35 @@ section {
   margin-top:0;
   color: rgb(255, 50, 60);
   font-family: 'Roboto Slab', serif;
+}
+
+
+
+#poland{
+  width: 40px;
+  height: 25px;
+  /*padding: 18px 28px;*/
+  margin: 1px;
+  margin-right: 200px;
+  background-image: url(images/poland.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  float: right;
+  cursor: pointer;
+}
+
+#united-kingdom{
+  width: 40px;
+  height: 25px;
+  /*padding: 18px 28px;*/
+  margin: 1px 5px;
+  background-image: url(images/united-kingdom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  float: right;
+  cursor: pointer;
 }
 
 
