@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-function Agreement() {
+function Agreement({agree}) {
 
     return (
         <section>
-            <h2>Sekcja 4</h2>
-            <h2>Zgoda na przetwarzanie danych (RODO)</h2>
-            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu 
-                w celu [CEL ZBIERANIA DANYCH] przez [DANE FIRMY] oraz przez podmioty trzecie.</p>
+            <h2>{agree.h21}</h2>
+            <h2>{agree.h22}</h2>
+            <p>{agree.p1}</p>
         </section>
       );
 }

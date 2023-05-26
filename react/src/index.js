@@ -8,11 +8,8 @@ import ColorButton from './components/ColorButton';
 import ColorPicker from './components/ColorPicker';
 import AudioSection from './components/AudioSection';
 import reportWebVitals from './reportWebVitals';
+import backImage from './images/0_connection_between_emotions_and_colors.png';
 import $ from 'jquery';
-
-
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,15 +23,17 @@ $( document ).ready(function() {
   var isColorSelected = true;
   var counter = 0;
   var rows = 0;
-  var questionsAmount = 10;
+  var questionsAmount = 16; // 10 pytań o audio + 6 o emocje
   var outputVector = [];
   var selectedSex = [];
   var selectedAge = [];
+  var selectedDisease = [];
 
 
 
-  $('.ccccc').hide();
-  $('.dialog').hide();
+  $('.colors_appears').hide();
+  $('.color-picker-container').show();
+  $('.warning_info').hide();
 
 $('.rad-input[name="sex"]').on('change', function() {
   selectedSex = $('input[name="sex"]:checked').val();
@@ -46,10 +45,21 @@ $('.rad-input[name="age"]').on('change', function() {
   outputVector[1] = selectedAge;
   //console.log('outputVector: ' + selectedAge);
 });
+$('.rad-input[name="disease"]').on('change', function() {
+  selectedDisease = $('input[name="disease"]:checked').val();
+  outputVector[2] = selectedDisease;
+  //console.log('outputVector: ' + selectedAge);
+});
 
 
 
 var colorsMatrix = [
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
+  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
   ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
   ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
   ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
@@ -130,12 +140,13 @@ var colorsMatrix = [
         });
       }
       $('.color-name').empty().append(selectedSwatchName);
-      $('.ccccc').hide();
+      $('.colors_appears').hide();
+      $('.color-picker-container').show();
     }, 500);
     setTimeout(function() {
       $('.ripple').removeClass('scaling');
     }, 900);
-    $('.dialog').hide();
+    $('.warning_info').hide();
     window.stop();
   });
 
@@ -197,8 +208,9 @@ var colorsMatrix = [
     colorsMatrix[rows][1] = "hsla(0, 0%, 60%, 0.14)";
     colorsMatrix[rows][2] = "hsla(0, 0%, 60%, 0.14)";
     document.body.style.backgroundColor = "white";
-    $('.ccccc').hide();
-    $('.dialog').hide();
+    $('.colors_appears').hide();
+    $('.warning_info').hide();
+    $('.color-picker-container').show();
 
     $('.choose_color_button1').css({
       backgroundColor: colorsMatrix[rows][0],
@@ -217,24 +229,27 @@ var colorsMatrix = [
 
   $(".choose_color_button1").click(function () {
     counter = 1;
-    $(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
+    /*$(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
     $('.choose_color_button2').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.ccccc').show();
+    $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
+    $('.colors_appears').show();
+    $('.color-picker-container').hide();
   });
   $(".choose_color_button2").click(function () {
     counter = 2;
-    $(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
+    /*$(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
     $('.choose_color_button1').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.ccccc').show();
+    $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
+    $('.colors_appears').show();
+    $('.color-picker-container').hide();
   });
   $(".choose_color_button3").click(function () {
     counter = 3;
-    $(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
+    /*$(this).css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.75');
     $('.choose_color_button1').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.choose_color_button2').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');
-    $('.ccccc').show();
+    $('.choose_color_button2').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
+    $('.colors_appears').show();
+    $('.color-picker-container').hide();
   });
 
 
@@ -248,16 +263,16 @@ var colorsMatrix = [
     document.querySelectorAll('audio').forEach(el => el.pause());
     document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
     document.body.style.backgroundColor = "white";
-    //document.body.style.backgroundImage = "url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529')";
+    //document.body.style.backgroundImage = "backImage";
     
     //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR
-    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0)|| colorsMatrix[rows][0] !== 'hsla(0, 0%, 60%, 0.14)'|| colorsMatrix[rows][1] !== 'hsla(0, 0%, 60%, 0.14)' || colorsMatrix[rows][2] !== 'hsla(0, 0%, 60%, 0.14)'){
+    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0 && selectedDisease.length !== 0)|| colorsMatrix[rows][0] !== 'hsla(0, 0%, 60%, 0.14)'|| colorsMatrix[rows][1] !== 'hsla(0, 0%, 60%, 0.14)' || colorsMatrix[rows][2] !== 'hsla(0, 0%, 60%, 0.14)'){
       isColorSelected = true;
-      $('.dialog').hide();
+      $('.warning_info').hide();
     }
     else {
       isColorSelected = false;
-      $('.dialog').show();
+      $('.warning_info').show();
     }
 
 
@@ -275,7 +290,7 @@ var colorsMatrix = [
         }
         if (child > 1 && child < questionsAmount + 2){
           isColorSelected = false;
-          $('.dialog').hide();
+          $('.warning_info').hide();
         }
         child++;
       }
@@ -293,7 +308,7 @@ var colorsMatrix = [
           rows--;
         }
         child--;
-        $('.dialog').hide();
+        $('.warning_info').hide();
       }
       
     }

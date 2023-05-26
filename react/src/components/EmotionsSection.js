@@ -14,11 +14,8 @@ function AudioSection({questions}) {
             <h3>{questions.quest}</h3> 
             {/*questions.audio   '../audio_emoji/Goblin.mp3'  */  }
             <hr /><br/>
-            <div className="audio-container">
-              <audio id = "idAudio" controls>
-                <source src={require('../audio_emoji/' + questions.audio)} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
+            <div className="emotion-container">
+              <h3>{questions.emotion}</h3>
             </div>
             <br/>
             <div className="color-picker-container">

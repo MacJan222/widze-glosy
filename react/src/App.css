@@ -56,7 +56,7 @@ p{
 }
 
 .button {
-  background: rgb(0, 170, 105);
+  background: rgb(217, 178, 245);
   border-radius: 5px;
   padding: 15px 25px;
   display: inline-block;
@@ -84,14 +84,17 @@ section {
   transition:transform 0.2s ease-in-out;
 }
 
-.dialog{
+.warning_info{
   text-align:justify;
   margin-top:0;
   color: rgb(255, 50, 60);
   font-family: 'Roboto Slab', serif;
 }
 
-
+.colors_image{
+  width: 100%; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
 
 #poland{
   width: 40px;
@@ -208,6 +211,7 @@ input[type=text] {
 
 body {
   background: #ffffff; /*DOMYŚLNE TŁO APKI*/
+  background-image: "./images/kisspng-color-circle-graphic-design-vector-color-circle-decorative-pattern-5aae8dd4b3af89.101224301521389012736.png";
   font-family: 'Roboto Slab', serif;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -305,19 +309,18 @@ audio::-webkit-media-controls-panel {
 
 
 .reset_color{
-  background:  rgb(241, 241, 241);
-  border-radius: 10%;
+  background:  rgba(241, 241, 241, 0.619);
+  border-radius: 9%;
   /*border: 0.5px solid #000000;*/
-  padding-top: 14px;
+  padding-top: 6px;
   padding-left: 2px;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 30px;
   color: #000000;
   font-size: smaller;
   text-align: center;
-  margin-right: 5px;
-  box-shadow: 0 0px 10px rgba(255, 86, 86, 0.35);
-  margin-left: 65px;
+  box-shadow: 0 0px 10px rgba(146, 146, 146, 0.49);
+  margin-left: 425px;
   cursor: pointer;
 }
 
@@ -379,16 +382,14 @@ audio::-webkit-media-controls-panel {
 }
 
 .card {
-  width: 40vmin;
-  height: 11vmin;
+  width: 420px;
+  height: 80px;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 0 100em rgba(34, 34, 34, 0.384), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
   border-radius: 3px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
-  min-width: 400px;/*żeby nie zmniejszał się box*/
-  min-height: 110px;
   /*transition: opacity 0.3s;*/
 }
 .card .spacer {
@@ -451,6 +452,7 @@ audio::-webkit-media-controls-panel {
   margin: 4px;
   padding: 0;
   position: relative;
+  bottom: 18px; /*TUTAJ WYŻEJ KOLORKI DAJE NIŻ DOMYŚLNIE*/
 }
 
 .color-picker div[class^="swatch-"]:hover li,

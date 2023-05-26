@@ -1,18 +1,19 @@
 import React from 'react';
-import ColorPicker from './ColorPicker';
+import colorsImage from '../images/0_connection_between_emotions_and_colors.png' 
 
-function StudentsIntro() {
+function StudentsIntro({intro}) {
   return (
     <section> 
-        <h3>Dzień dobry,</h3>
-        <p> jesteśmy studentami II stopnia na Politechnice Gdańskiej i realizujemy projekt badawczy. 
+        {/*<img src={colorsImage} className='colors_image'></img>*/}
+        <h3>{intro.h3}</h3>
+        <p> {intro.p1}
           {/*<b>Analiza powiązań pomiędzy brzmieniem głosu i kolorem przypisanym do próbki głosowej mówcy/śpiewu</b>. */}
         <br /><br />
-        Zbieramy informacje o tym, jakie skojarzenia emocji i dzwięków z kolorami mają osoby o różnych charakterystykach.
+        {intro.p2}
         <br /><br />
-        Dana ankieta nie zajmie więcej niż 3 minuty a pytania są anonimowe, łatwe i przyjemne :)
+        {intro.p3}
         <br /><br />
-        Więc serdecznie zapraszamy do jej wypełnienia ❤️</p>
+        {intro.p4}</p>
 
     </section>
   );
