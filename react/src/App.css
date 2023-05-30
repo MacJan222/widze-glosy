@@ -3,121 +3,55 @@
 
 html {
   height: 100%;
-  min-height:800px;
-  max-width: 1200px;
+  /*min-height:800px;*/
+  max-width: 800px;
   margin: 0 auto;
 }
-/* TO JEST TO PIERWSZE BODY DO STRONY, NA RAZIE KORZYSTAMY Z TEGO DRUGIEGO CO JEST NIŻEJ
-body {
-  background: url('https://img.freepik.com/free-vector/blue-fluid-patterned-background-vector_53876-143618.jpg?w=740&t=st=1683227891~exp=1683228491~hmac=d906a9e2c3aa16eb0be7931fb0451d2aa881d1a4de26e688a4efa897ca5be529');
-  background-size:cover;
-  background-repeat:no-repeat;
-  text-align: center;
- font-family: 'Noto Sans', sans-serif;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}*/
-
-@media only screen and (min-width: 800px) {
-  html {
-    min-width: 600px;
-  }
-  
-  section {
-    max-width: 600px;
-    min-height: 350px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  #svg_form_time {
-    padding-top: 10px;
+@media only screen and (max-width: 500px) {
+  h2, h3, p, .choose_color_button1, .choose_color_button2, .choose_color_button3 {
+    scale: 0.90;
   }
 
-  .header-name {
-    scale: 1.4;
-  }
-
-  h2, h3, .rad-label {
-    scale: 1.2;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  p, .color-picker-container, .reset_color, .audio-container {
-    scale: 1.2;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 5%;
-  }
-  .color-picker {
-    scale: 1.3;
-    margin-top: 10%;
-  }
-
-  .rad-text {
-    font-size: 30px;
-  }
-
-}
-
-@media only screen and (min-width: 415px) and (max-width: 800px) {
-  html {
-    min-width: 400px;
-  }
-  
-  section {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-    
-  circle {
-    r: 30;
-  }
-
-  #svg_form_time {
-    padding-top: 5%;
-  }
-
-  .header-name {
-    padding: 0 5%;
-  }
-
-}
-
-@media only screen and (max-width: 415px) {
-  html {
-    max-width: 500px;
-  }
-
-  section {
-    margin-right: 5%;
-    margin-left: 5%;
+  .color-picker, .button {
+    scale: 0.8;
   }
 
   circle {
     r: 40;
   }
 
-  #svg_form_time {
-    padding-top: 5%;
+  .reset_color {
+    margin-left: 75%;
+    margin-bottom: 3%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .reset_color {
+    margin-left: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+   .reset_color {
+    margin-left: 85%;
+    scale: 1.2;
   }
 
-  .color-picker {
-    scale: 0.77
+  #poland, #united-kingdom {
+    scale: 1.3;
   }
 
-  .choose_color_button2 {
-    margin-right: 20px;
-    margin-left: 20px;
+  .header-name {
+    scale: 1.2;
+    margin: 7% 5%;
+    max-width: fit-content;
+    position: relative;
+    left: 7%;
   }
 
-  h2, h3, p, audio, .reset_color, .color-picker-container {
-    scale: 0.85;
+  .audio-container, .color-picker {
+    scale: 1.2;
   }
 }
 
@@ -125,13 +59,13 @@ h2{
   font-weight:400;
   padding-top:0;
   margin-top:0;
-  margin-bottom: 5%;
   color: rgb(0, 0, 0);
   font-family: 'Roboto Slab', serif;
 }
 
 .header-name {
   text-shadow: 0px 0px 2px rgb(255, 255, 255) ; /*TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
+  max-width: 600px;
 }
 
 
@@ -153,8 +87,8 @@ p{
 
 #svg_form_time {
   height: 20px;
-  max-width: 80%;
-  margin: 2% auto 5%;
+  max-width: 90%;
+  margin: 5% auto 5%;
   display: block;
   overflow: visible;
 }
@@ -166,17 +100,18 @@ p{
 }
 
 .button {
-  background: rgb(0, 170, 105);
+  background: rgb(27, 170, 103);
   border-radius: 5px;
   padding: 15px 25px;
   display: inline-block;
-  margin: 10px;
-  margin-bottom: 20px;
+  margin: 10px 3%;
   font-weight: bold;
   color: white;
   cursor: pointer;
   box-shadow:0px 2px 5px rgb(0,0,0,0.5);
   width: fit-content;
+  margin-bottom: 3%;
+  font-size: 30px;
 }
 
 .disabled {
@@ -185,17 +120,53 @@ p{
 
 section {
   text-align: left;
-  padding: 6%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: auto;
-  height: auto;
+  padding: 5% ;
+  margin: 5% 5% 2%;
   background:white;
   background:rgba(255, 255, 255, 0.664);
   backdrop-filter:blur(10px);
   box-shadow:0px 2px 10px rgba(0,0,0,0.3);
   border-radius:5px;
   transition:transform 0.2s ease-in-out;
+}
+
+.warning_info{
+  text-align:justify;
+  margin-top:0;
+  color: rgb(255, 50, 60);
+  font-family: 'Roboto Slab', serif;
+}
+
+.colors_image{
+  width: 100%; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#poland{
+  width: 40px;
+  height: 25px;
+  /*padding: 18px 28px;*/
+  margin: 1px;
+  margin-right: 8%;
+  background-image: url(images/poland.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  float: right;
+  cursor: pointer;
+}
+
+#united-kingdom{
+  width: 40px;
+  height: 25px;
+  /*padding: 18px 28px;*/
+  margin: 1px 3%;
+  background-image: url(images/united-kingdom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  float: right;
+  cursor: pointer;
 }
 
 
@@ -219,7 +190,7 @@ input[type=text] {
   align-items: center;
 
   border-radius: 100px;
-  padding: 3% 5%;
+  padding: 1% 7%;
   margin: 3%;
 
   cursor: pointer;
@@ -251,12 +222,10 @@ input[type=text] {
 
 .rad-design::before {
   content: '';
-
   display: inline-block;
   width: inherit;
   height: inherit;
   border-radius: inherit;
-
   background: hsl(152, 68%, 96%);
   transform: scale(1.1);
   transition: .3s;
@@ -272,7 +241,7 @@ input[type=text] {
   /*letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 900;*/
-  font-size: 14px;
+  font-size: 20px;
   font-family: 'Roboto Slab', serif;
   transition: .3s;
 }
@@ -288,13 +257,13 @@ input[type=text] {
 
 body {
   background: #ffffff; /*DOMYŚLNE TŁO APKI*/
+  background-image: "./images/kisspng-color-circle-graphic-design-vector-color-circle-decorative-pattern-5aae8dd4b3af89.101224301521389012736.png";
   font-family: 'Roboto Slab', serif;
   color: #fff;
-  -webkit-font-smoothing: ant
-  ialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
   padding: 0;
+  margin: 0;
   /*display: flex; SPRAWIA ŻE STRZAŁKI SĄ DUGIE*/ 
   flex-direction: column;
   height: 100%;
@@ -356,10 +325,12 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 2%;
+  margin-bottom: 5%;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  max-width: fit-content;
 }
 
 
@@ -384,35 +355,29 @@ audio::-webkit-media-controls-panel {
   border-radius: 20px;
 }
 
-
 .reset_color{
-  background:  rgb(255, 85, 85);
-  border-radius: 25px;
+  background:  rgba(241, 241, 241, 0.619);
+  border-radius: 9%;
   /*border: 0.5px solid #000000;*/
-  padding-top: 15px;
+  padding-top: 6px;
   padding-left: 2px;
   width: 70px;
-  height: 50px;
+  height: 30px;
   color: #000000;
   font-size: smaller;
   text-align: center;
-  margin-right: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-  margin-left: 5%;
+  box-shadow: 0 0px 10px rgba(146, 146, 146, 0.49);
   cursor: pointer;
-  transition: .3s;
+  margin-top: 5%;
 }
 
 
 
 .color-picker-container {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;
   align-items: center;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+  margin: 3% auto;*/
 }
 
 .choose_color_button1{
@@ -427,8 +392,9 @@ audio::-webkit-media-controls-panel {
   color: #000000;
   font-size: smaller;
   text-align: center;
-  /*margin-right: 5px;*/
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 .choose_color_button2{
   background: rgb(241, 241, 241);;
@@ -437,13 +403,12 @@ audio::-webkit-media-controls-panel {
   padding: 20px;
   width: 80px;
   height: 80px;
-  /*margin-left: auto;
-  margin-right: auto;*/
   color: #000000;
   font-size: smaller;
   text-align: center;
-  /*margin-right: 5px;*/
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 .choose_color_button3{
   background: rgb(241, 241, 241);
@@ -458,19 +423,18 @@ audio::-webkit-media-controls-panel {
   font-size: smaller;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  padding-top: 30px;
+  cursor: pointer;
 }
 
 .card {
-  margin: 0 auto;
+  margin: 0 -5%;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  /*box-shadow: 0 0 0 100em rgba(34, 34, 34, 0), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
+  box-shadow: 0 0 0 100em rgba(34, 34, 34, 0.384), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
   border-radius: 3px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
-  /* min-width: 400px; /*żeby nie zmniejszał się box
-  min-height: 110px; */
+  /*transition: opacity 0.3s;*/
 }
 .card .spacer {
   flex-grow: 1;
@@ -497,7 +461,7 @@ audio::-webkit-media-controls-panel {
   z-index: 999;
   /*color: #555;*/
   width: 100%;
-  bottom: 8%;
+  /*bottom: 8%;*/
   text-align: center;
 }
 .card .image-container .shading-container img {
@@ -532,10 +496,12 @@ audio::-webkit-media-controls-panel {
   margin: 4px;
   padding: 0;
   position: relative;
+  bottom: 18px; /*TUTAJ WYŻEJ KOLORKI DAJE NIŻ DOMYŚLNIE*/
 }
+
 .color-picker div[class^="swatch-"]:hover li,
 .color-picker div[class*=" swatch-"]:hover li {
-  opacity: 1!important;
+  opacity: 1!important; 
 }
 .color-picker div[class^="swatch-"] > ul,
 .color-picker div[class*=" swatch-"] > ul {
@@ -545,7 +511,6 @@ audio::-webkit-media-controls-panel {
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   left: -4px;
   top: -112px;
@@ -681,61 +646,61 @@ audio::-webkit-media-controls-panel {
   background: #311a00;
 }*/
 .color-picker .swatch-ga .subswatch-1 {
-  background: #fff6cb;
+  background: #fffd86;
 }
 .color-picker .swatch-ga .subswatch-1.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ga .subswatch-2 {
-  background: #fee566;
+  background: #ffff00;
 }
 .color-picker .swatch-ga .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ga .subswatch-3 {
-  background: #fdd401;
+  background: #ffee00;
 }
 .color-picker .swatch-ga .subswatch-4 {
-  background: #977f01;
+  background: #f4cd0d;
 }
 /*.color-picker .swatch-ga .subswatch-5 {
   background: #322a00;
 }*/
 .color-picker .swatch-ve .subswatch-1 {
-  background: #d9f0c9;
+  background: #b3ff7d;
 }
 .color-picker .swatch-ve .subswatch-1.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ve .subswatch-2 {
-  background: #a1d979;
+  background: #6aff00;
 }
 .color-picker .swatch-ve .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ve .subswatch-3 {
-  background: #6bb834;
+  background: #54d33d;
 }
 .color-picker .swatch-ve .subswatch-4 {
-  background: #3d691e;
+  background: #377c05;
 }
 /*.color-picker .swatch-ve .subswatch-5 {
   background: #0f1907;
 }*/
 .color-picker .swatch-al .subswatch-1 {
-  background: #d6dff6;
+  background: #a5eeff;
 }
 .color-picker .swatch-al .subswatch-1.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-al .subswatch-2 {
-  background: #829de4;
+  background: #2bdce9;
 }
 .color-picker .swatch-al .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-al .subswatch-3 {
-  background: #2e5bd2;
+  background: #3195dd;
 }
 .color-picker .swatch-al .subswatch-4 {
   background: #1c377e;
@@ -756,7 +721,7 @@ audio::-webkit-media-controls-panel {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-vi .subswatch-3 {
-  background: #952fb4;
+  background: #ae39d2;
 }
 .color-picker .swatch-vi .subswatch-4 {
   background: #521a63;

@@ -3,51 +3,72 @@ import React, { useState, useRef } from 'react';
 
 import Header from './components/Header';
 import StudentsIntro from './components/StudentsIntro';
+import StudentsEnd from './components/StudentsEnd';
 import AudioSection from './components/AudioSection';
-import ColorPicker from './components/ColorPicker';
-import BasicInformation from './components/BasicInformation';
+import EmotionsSection from './components/EmotionsSection';
+import BasicInformation1 from './components/BasicInformation1';
 import Agreement from './components/Agreement';
-import ColorButton from './components/ColorButton';
 import { questions } from './questions/Questions';
+import { questions_english } from './questions/Questions_EN';
+import { text } from './text/Text';
+import { text_english } from './text/Text_EN';
+import colorsImage from './images/0_connection_between_emotions_and_colors.png' 
 
+var updatedQuestions = questions;
+var updatedText = text;
 
 function App() {
 
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  var [ENGLISH, setENGLISH] = useState(updatedQuestions, updatedText);
 
-  const handleNextItem = () => {
-    if (currentItemIndex <= questions.length - 1 )
-    {setCurrentItemIndex(currentItemIndex === questions.length - 1 ? 0 : currentItemIndex + 1);}
-  };
-
+    const PolandClick = () => {
+      updatedQuestions = questions;
+      updatedText = text;
+      setENGLISH(updatedQuestions, updatedText);
+    };
+    const EnglandClick = () => {
+      updatedQuestions = questions_english;
+      updatedText = text_english;
+      setENGLISH(updatedQuestions, updatedText);
+    };
 
   return (
     <div>
+      {/*<img src={colorsImage} className='colors_image'></img>*/}
+      <Header header = {updatedText[1]}/>
+      <button id="poland" onClick={PolandClick}></button>
+      <button id="united-kingdom" onClick={EnglandClick}></button>
+      <br />
 
-      <Header />
-      <StudentsIntro/>
-      <BasicInformation/>
+      <StudentsIntro intro = {updatedText[2]}/>
+      <BasicInformation1 basic1 = {updatedText[3]} basic2 = {updatedText[4]} basic3 = {updatedText[6]}/>
 
       {/*TO JEST BARDZO NIEŁADNA METODA, NA KONIEC TRZEBA TO ZOPTYMALIZOWAĆ*/}
-      <AudioSection questions = {questions[0]}/>
-      <AudioSection questions = {questions[1]}/>
-      {/*{audioRef.current.pause()} TO TUTAJ*/}
-      <AudioSection questions = {questions[2]}/>
-      <AudioSection questions = {questions[3]}/>
-      <AudioSection questions = {questions[4]}/>
-
-      <AudioSection questions = {questions[5]}/>
-      <AudioSection questions = {questions[6]}/>
-      <AudioSection questions = {questions[7]}/>
-      <AudioSection questions = {questions[8]}/>
-      <AudioSection questions = {questions[9]}/>
-
-      <Agreement />
-
-        {/*Definiujemy 3 buttony z których będziemy korzystać*/}
-        <div className="button" id="prev">← </div> {/*przed </div> można wpisać nazwę przycisku*/}
+      {/*GŁOS - KOLORY */}
+      <AudioSection questions = {updatedQuestions[0]}/>
+      <AudioSection questions = {updatedQuestions[1]}/>
+      <AudioSection questions = {updatedQuestions[2]}/>
+      <AudioSection questions = {updatedQuestions[3]}/>
+      <AudioSection questions = {updatedQuestions[4]}/>
+      {/*ŚPIEW - KOLORY */}
+      <AudioSection questions = {updatedQuestions[5]}/>
+      <AudioSection questions = {updatedQuestions[6]}/>
+      <AudioSection questions = {updatedQuestions[7]}/>
+      <AudioSection questions = {updatedQuestions[8]}/>
+      <AudioSection questions = {updatedQuestions[9]}/>
+      {/*EMOCJE - KOLORY */}
+      <EmotionsSection questions = {updatedQuestions[10]}/>
+      <EmotionsSection questions = {updatedQuestions[11]}/>
+      <EmotionsSection questions = {updatedQuestions[12]}/>
+      <EmotionsSection questions = {updatedQuestions[13]}/>
+      <EmotionsSection questions = {updatedQuestions[14]}/>
+      <EmotionsSection questions = {updatedQuestions[15]}/>
+      
+      <Agreement agree = {updatedText[5]}/>
+      {/*<StudentsEnd /> SUBMIT PRZEKIERUJE NA INNĄ STRONĘ StudentsEnd*/} 
+        <div className="button" id="prev">← </div> 
         <div className="button" id="next"> →</div>
-        <div className="button" id="submit">Agree and send application</div>
+        <div className="button" id="submit">{updatedText[0].p1}</div>
     </div>
   );
 }
