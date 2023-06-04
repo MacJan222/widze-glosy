@@ -42,18 +42,18 @@ export const text_english = [
       p2: 'Woman',
       p3: 'Other',
       p4: '...',
-      p5: 'Please answer the quesitons.'
+      p5: 'Please answer the questions.'
   },
   { 
       id: 4, 
       export_name: 'BasicInformation2',
       h2: '...', 
       h3: 'Please select your age group', 
-      p1: '0 - 20', 
-      p2: '21 - 40',
-      p3: '41 - 60',
-      p4: '60+',
-      p5: 'Please answer the quesitons.'
+      p1: 'Under 18', 
+      p2: '19 - 35',
+      p3: '36 - 60',
+      p4: 'Above 60',
+      p5: 'Please answer the questions.'
   },
   { 
       id: 5, 
@@ -77,6 +77,6 @@ export const text_english = [
     p2: 'No',
     p3: 'I don\'t know',
     p4: '...',
-    p5: 'Please answer the quesitons.'
+    p5: 'Please answer the questions.'
 },
 ];

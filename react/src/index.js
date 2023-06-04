@@ -263,6 +263,10 @@ var colorsMatrix = [
     document.querySelectorAll('audio').forEach(el => el.pause());
     document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
     document.body.style.backgroundColor = "white";
+
+    // dodane, żeby po przejściu na kolejną stronę pokazywała się ona od góry
+    window.scrollTo(0, 0);
+    
     //document.body.style.backgroundImage = "backImage";
     
     //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR

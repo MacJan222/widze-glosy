@@ -13,7 +13,7 @@ export const text = [
     { 
       id: 1, 
       export_name: 'Header',
-      h2: 'Analiza powiązań emocji i dzwięków z kolorami', 
+      h2: 'Analiza powiązań emocji i dźwięków z kolorami', 
       h3: '...', 
       p1: '...', 
       p2: '...',
@@ -27,7 +27,7 @@ export const text = [
       h2: '...', 
       h3: 'Dzień dobry,', 
       p1: 'jesteśmy studentami II stopnia na Politechnice Gdańskiej i realizujemy projekt badawczy. ',
-      p2: 'Zbieramy informacje o tym, jakie skojarzenia emocji i dzwięków z kolorami mają osoby o różnych charakterystykach.', 
+      p2: 'Zbieramy informacje o tym, jakie skojarzenia emocji i dźwięków z kolorami mają osoby o różnych charakterystykach.', 
       p3: 'Dana ankieta nie zajmie więcej niż 3 minuty a pytania są anonimowe, łatwe i przyjemne :)',
       p4: 'Więc serdecznie zapraszamy do jej wypełnienia ❤️',
       p5: '...'
@@ -49,10 +49,10 @@ export const text = [
         export_name: 'BasicInformation2',
         h2: '...', 
         h3: 'Proszę zaznaczyć swoją grupę wiekową', 
-        p1: '0 - 20', 
-        p2: '21 - 40',
-        p3: '41 - 60',
-        p4: '60+',
+        p1: 'Poniżej 18 lat', 
+        p2: 'Od 19 do 35 lat',
+        p3: 'Od 36 do 60 lat',
+        p4: 'Powyżej 60 lat',
         p5: 'Proszę odpowiedzieć na pytania.'
     },
     { 
