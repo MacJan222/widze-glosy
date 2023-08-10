@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Voice-Color Association Survey Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Voice-Color Association Survey Application! This application is designed for research purposes, aiming to analyze the connections between voice sound and colors assigned to voice samples. The survey allows participants to match colors to audio recordings based on their perceptions.
 
-## Available Scripts
+### Overview
 
-In the project directory, you can run:
+This README provides an overview of the Voice-Color Association Survey Application. It explains the project's context, objectives, structure, and technical details.
 
-### `npm start`
+### Context
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project focuses on creating a survey to explore the relationship between voice sound and color perception. The goal is to gather data from participants and use it to train a network for color assignment to audio samples.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Objectives
 
-### `npm test`
+The primary objectives of the project include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Designing an anonymous and user-friendly survey.
+* Gathering diverse responses for comprehensive analysis.
+* Allowing participants to match colors to provided audio samples.
+* Implementing a color palette selection feature.
+* Enabling language switching for diverse respondents.
+* Ensuring GDPR-compliant data processing.
 
-### `npm run build`
+### Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Voice-Color Association Survey Application consists of the following components:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Questionnaire Structure:** The survey is structured into sections, including a title page, respondent information, audio-color association, and consent page.
+2. **Audio-Color Association:** The core of the survey, participants match colors to different emotions associated with audio samples.
+3. **Color Palette:** A dynamic palette of colors assists participants in making their color choices.
+4. **Language Switching:** Participants can switch between Polish and English languages.
+5. **Progress Tracking:** A progress bar motivates respondents by indicating survey completion.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technical Details
 
-### `npm run eject`
+* Programming Language: JavaScript
+* Framework: React
+* Database Integration: MySQL
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Usage
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run the application using a suitable development environment (e.g., Node.js).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Video Demonstration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A video demonstration of the Voice-Color Association Survey Application is available below. In this video, you'll see how the application works and how participants interact with the color selection and audio associations.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[<img src="https://i.ytimg.com/vi/cqFEiNvEyG8/maxresdefault.jpg" width="90%">](https://www.youtube.com/embed/cqFEiNvEyG8)
