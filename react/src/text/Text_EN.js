@@ -27,7 +27,7 @@ export const text_english = [
     h2: '...', 
     h3: 'Hello,', 
     p1: 'we are second degree students at the Gdańsk University of Technology and we are carrying out a research project.',
-    p2: 'We collect information on the relationship between sound, the emotion contained in the voice and color.', 
+    p2: 'We collect information about the associations of emotions and sounds with colors that people with different characteristics have.', 
     p3: 'A given survey will not take more than 3 minutes and the questions are anonymous, easy and pleasant :)',
     p4: 'We warmly invite you to fill it in ❤️',
     p5: '...'

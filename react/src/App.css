@@ -3,80 +3,12 @@
 
 html {
   height: 100%;
-  margin: 0 auto;
+  min-height:800px;
 }
+
 @media only screen and (max-width: 500px) {
-  h2, h3, p, .choose_color_button1, .choose_color_button2, .choose_color_button3, .rad-label {
-    scale: 0.90;
-  }
-
-  .color-picker, .button {
-    scale: 0.8;
-  }
-
-  circle {
-    r: 40;
-  }
-
-  .reset_color {
-    margin-left: 75%;
-    margin-bottom: 3%;
-  }
-
-  section {
-    margin: 5% 5% 2%;
-    padding: 5%;
-  }
-
-  #svg_form_time {
-    max-width: 90%;
-  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 800px) {
-  .reset_color {
-    margin-left: 80%;
-    margin-bottom: 2%;
-  }
-
-  section {
-    margin: 5% 5% 2%;
-    padding: 5%;
-  }
-
-  #svg_form_time {
-    max-width: 90%;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-   .reset_color {
-    margin-left: 85%;
-    scale: 1.2;
-  }
-
-  #poland, #united-kingdom {
-    scale: 1.5;
-  }
-
-  .header-name {
-    scale: 1.2;
-    max-width: fit-content;
-    position: relative;
-  }
-
-  .audio-container, .color-picker {
-    scale: 1.2;
-  }
-
-  section {
-    max-width: 600px;
-    margin: 2% auto 1%;
-    padding: 3% 5% 2%;
-  }
-
-  #svg_form_time {
-    max-width: 70%;
+  html {
+    min-width: 400px;
   }
 }
 
@@ -89,9 +21,7 @@ h2{
 }
 
 .header-name {
-  text-shadow: 0px 0px 2px rgb(255, 255, 255) ; /*TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
-  max-width: 600px;
-  margin: 0 auto 2%;
+  text-shadow: 2px 1px 2px rgb(255, 255, 255) ; /*TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
 }
 
 
@@ -113,7 +43,8 @@ p{
 
 #svg_form_time {
   height: 20px;
-  margin: 3% auto 5%;
+  max-width: 80%;
+  margin: 40px auto 20px;
   display: block;
   overflow: visible;
 }
@@ -125,18 +56,15 @@ p{
 }
 
 .button {
-  background: rgb(27, 170, 103);
+  background: rgb(217, 178, 245);
   border-radius: 5px;
-  padding: 0 20px 9px;
+  padding: 15px 25px;
   display: inline-block;
-  margin: 1% 2%;
+  margin: 10px;
   font-weight: bold;
   color: white;
   cursor: pointer;
   box-shadow:0px 2px 5px rgb(0,0,0,0.5);
-  width: fit-content;
-  margin-bottom: 3%;
-  font-size: 40px; /* tutaj można powiększyć strzałki*/
 }
 
 .disabled {
@@ -145,6 +73,9 @@ p{
 
 section {
   text-align: left;
+  padding: 50px ;
+  max-width: 500px;
+  margin: 30px auto;
   background:white;
   background:rgba(255, 255, 255, 0.664);
   backdrop-filter:blur(10px);
@@ -169,26 +100,27 @@ section {
   width: 40px;
   height: 25px;
   /*padding: 18px 28px;*/
+  margin: 1px;
+  margin-right: 200px;
   background-image: url(images/poland.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  float: inherit;
+  float: right;
   cursor: pointer;
-  margin: 1% 2%;
 }
 
 #united-kingdom{
   width: 40px;
   height: 25px;
   /*padding: 18px 28px;*/
+  margin: 1px 5px;
   background-image: url(images/united-kingdom.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  float: inherit;
+  float: right;
   cursor: pointer;
-  margin: 1% 2%;
 }
 
 
@@ -212,8 +144,8 @@ input[type=text] {
   align-items: center;
 
   border-radius: 100px;
-  padding: 1% 7%;
-  margin: 3%;
+  padding: 8px 8px;
+  margin: 5px 0;
 
   cursor: pointer;
   transition: .3s;
@@ -225,7 +157,7 @@ input[type=text] {
 }
 
 .rad-input {
-  position: inherit;
+  position: absolute;
   left: 0;
   top: 0;
   width: 1px;
@@ -263,7 +195,7 @@ input[type=text] {
   /*letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 900;*/
-  font-size: 20px;
+  font-size: 14px;
   font-family: 'Roboto Slab', serif;
   transition: .3s;
 }
@@ -278,7 +210,7 @@ input[type=text] {
 /*CSS OD KOLORKÓW*/
 
 body {
-  /*background: #ffffff; /*DOMYŚLNE TŁO APKI*/
+  background: #ffffff; /*DOMYŚLNE TŁO APKI*/
   background-image: "./images/kisspng-color-circle-graphic-design-vector-color-circle-decorative-pattern-5aae8dd4b3af89.101224301521389012736.png";
   font-family: 'Roboto Slab', serif;
   color: #fff;
@@ -302,9 +234,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
-  /* TŁO APKI - DO ZMIANY ALBO USUNIĘCIA
-  background-image: url('./images/w_5_2.png');*/
 
 }
 :before,
@@ -350,12 +279,10 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2%;
-  margin-bottom: 5%;
+  margin-top: 0px;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: fit-content;
+  margin-left: 65px;
+  margin-right: 65px;
 }
 
 
@@ -380,6 +307,7 @@ audio::-webkit-media-controls-panel {
   border-radius: 20px;
 }
 
+
 .reset_color{
   background:  rgba(241, 241, 241, 0.619);
   border-radius: 9%;
@@ -392,17 +320,14 @@ audio::-webkit-media-controls-panel {
   font-size: smaller;
   text-align: center;
   box-shadow: 0 0px 10px rgba(146, 146, 146, 0.49);
+  margin-left: 425px;
   cursor: pointer;
-  margin-top: 5%;
 }
 
 
 
 .color-picker-container {
   display: flex;
-  /*justify-content: center;
-  align-items: center;
-  margin: 3% auto;*/
 }
 
 .choose_color_button1{
@@ -417,6 +342,7 @@ audio::-webkit-media-controls-panel {
   color: #000000;
   font-size: smaller;
   text-align: center;
+  margin-right: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   padding-top: 30px;
   cursor: pointer;
@@ -428,9 +354,12 @@ audio::-webkit-media-controls-panel {
   padding: 20px;
   width: 80px;
   height: 80px;
+  margin-left: auto;
+  margin-right: auto;
   color: #000000;
   font-size: smaller;
   text-align: center;
+  margin-right: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   padding-top: 30px;
   cursor: pointer;
@@ -453,7 +382,9 @@ audio::-webkit-media-controls-panel {
 }
 
 .card {
-  margin: 0 -5%;
+  width: 420px;
+  height: 80px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -486,7 +417,7 @@ audio::-webkit-media-controls-panel {
   z-index: 999;
   /*color: #555;*/
   width: 100%;
-  /*bottom: 8%;*/
+  bottom: 8%;
   text-align: center;
 }
 .card .image-container .shading-container img {
@@ -536,6 +467,7 @@ audio::-webkit-media-controls-panel {
   list-style: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
   padding: 0;
   left: -4px;
   top: -112px;
@@ -635,7 +567,7 @@ audio::-webkit-media-controls-panel {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ro .subswatch-2 {
-  background: #fa6571;
+  background: #ff5562;
 }
 .color-picker .swatch-ro .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
@@ -677,7 +609,7 @@ audio::-webkit-media-controls-panel {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-ga .subswatch-2 {
-  background: #ffe97b;
+  background: #fee566;
 }
 .color-picker .swatch-ga .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
@@ -712,25 +644,6 @@ audio::-webkit-media-controls-panel {
 /*.color-picker .swatch-ve .subswatch-5 {
   background: #0f1907;
 }*/
-.color-picker .swatch-ne .subswatch-1 {
-  background: #d6f4f6;
-}
-.color-picker .swatch-al .subswatch-1.active {
-  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
-}
-.color-picker .swatch-ne .subswatch-2 {
-  background: #82d5e4;
-}
-.color-picker .swatch-ne .subswatch-2.active {
-  background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
-}
-.color-picker .swatch-ne .subswatch-3 {
-  background: #2ebad2;
-}
-.color-picker .swatch-ne .subswatch-4 {
-  background: #1c6f7e;
-}
-
 .color-picker .swatch-al .subswatch-1 {
   background: #d6dff6;
 }
@@ -759,7 +672,7 @@ audio::-webkit-media-controls-panel {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
 }
 .color-picker .swatch-vi .subswatch-2 {
-  background: #ce81e6;
+  background: #c16fda;
 }
 .color-picker .swatch-vi .subswatch-2.active {
   background-image: url(http://iulian-anghel.ro/static-outside/active-black.png) !important;
