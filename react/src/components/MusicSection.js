@@ -46,8 +46,10 @@ function MusicSection({questions}) {
             <br/><hr /><br/>
             <div>
               <h3>Wybierz pasującą do nagrania emocję:</h3>
-              <select value={selectedOption} onChange={handleSelectChange}>
-                <option value=""disabled>wybierz emocję</option>
+              <select className="choose_emotion" name="emotion" onChange={handleSelectChange}>
+                <option disabled>
+                  wybierz emocję
+                </option>
                 <option value="neutralny">neutralny</option>
                 <option value="szczęście">szczęście</option>
                 <option value="smutek">smutek</option>

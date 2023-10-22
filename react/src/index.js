@@ -10,9 +10,15 @@ import AudioSection from './components/SpeechSection';
 import reportWebVitals from './reportWebVitals';
 import backImage from './images/0_connection_between_emotions_and_colors.png';
 import $ from 'jquery';
+import txtPeopleCounter from './txtPeopleCounter.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 let peopleCounter = 1;
+let peopleCountersss = fetch(txtPeopleCounter).then(r => r.text());
+
+
 
 
 //TA FUNKCJA JEST OD WSZYSTKIEGO (TAK JAKBY OD STRONY I OD BUTTONÓW)
@@ -21,7 +27,9 @@ $( document ).ready(function() {
   var active_color = "rgb(237, 40, 70)"; // zielony od buttonów: 0, 170, 105     KOLOR WYPEŁNIONYCH NA CZERWONO KÓŁECZEK NA GÓRZE
   var submitted_color = "#6bb834";
   
+  var isSurveyFinished = false;
   var isColorSelected = true;
+  var isEmotionSelected = true;
   var counter = 0;
   var rows = 0;
   var questionsAmount = 16; // 10 pytań o audio + 6 o emocje
@@ -29,7 +37,7 @@ $( document ).ready(function() {
   var selectedSex = [];
   var selectedAge = [];
   var selectedDisease = [];
-  var isSurveyFinished = false;
+  var emotionsMatrix = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   $('.colors_appears').hide();
   $('.color-picker-container').show();
@@ -50,7 +58,6 @@ $('.rad-input[name="disease"]').on('change', function() {
   outputVector[2] = selectedDisease;
   //console.log('outputVector: ' + selectedAge);
 });
-
 
 
 var colorsMatrix = [
@@ -113,8 +120,6 @@ var colorsMatrix = [
           backgroundColor: selectedColor
         });
       }
-
-
       if(counter === 1){
         counter = 1;  
         isColorSelected = true;
@@ -149,6 +154,15 @@ var colorsMatrix = [
     $('.warning_info').hide();
     window.stop();
   });
+
+  
+  $('.choose_emotion').on('change', function() {
+    const selectedEmotion = $(this).val(); // Get the selected option value
+    emotionsMatrix[rows] = selectedEmotion;
+    isEmotionSelected = true;
+    //console.log('emotionsMatrix: ' + emotionsMatrix);
+  });
+
 
   var child = 1;
   var length = $("section").length - 1;
@@ -271,19 +285,22 @@ var colorsMatrix = [
     
     //document.body.style.backgroundImage = "backImage";
     
-    //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR
-    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0 && selectedDisease.length !== 0)|| colorsMatrix[rows][0] !== 'hsla(0, 0%, 60%, 0.14)'|| colorsMatrix[rows][1] !== 'hsla(0, 0%, 60%, 0.14)' || colorsMatrix[rows][2] !== 'hsla(0, 0%, 60%, 0.14)'){
+    //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR ORAZ EMOCJĘ
+    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0 && selectedDisease.length !== 0)|| (emotionsMatrix[rows] !== 0 && (colorsMatrix[rows][0] !== 'hsla(0, 0%, 60%, 0.14)'|| colorsMatrix[rows][1] !== 'hsla(0, 0%, 60%, 0.14)' || colorsMatrix[rows][2] !== 'hsla(0, 0%, 60%, 0.14)'))){
       isColorSelected = true;
+      isEmotionSelected = true;
       $('.warning_info').hide();
     }
     else {
       isColorSelected = false;
+      isEmotionSelected = false;
       $('.warning_info').show();
     }
 
 
     var id = $(this).attr("id");
     if (id === "next" && isColorSelected === true) {
+      //console.log(peopleCountersss);
       $("#prev").removeClass("disabled");
       if (child >= length-1) {
         $(this).addClass("disabled");
@@ -296,6 +313,7 @@ var colorsMatrix = [
         }
         if (child > 1 && child < questionsAmount + 2){
           isColorSelected = false;
+          isEmotionSelected = false;
           $('.warning_info').hide();
         }
         child++;
@@ -333,9 +351,10 @@ var colorsMatrix = [
     }
     if(id === "again")
     {
-      window.location.reload();
       isSurveyFinished = false;
       peopleCounter = peopleCounter+1;
+      console.log(peopleCounter);
+      window.location.reload();
     }
 
     counter = 0;
@@ -355,7 +374,9 @@ var colorsMatrix = [
     //console.log('outputVector: ' + selectedAge);
     //console.log("this is a colorsMatrix:" + colorsMatrix[rows][0]);
     
-    outputVector[2] = colorsMatrix;
+    outputVector[3] = colorsMatrix;
+    outputVector[4] = emotionsMatrix;
+    console.log(outputVector);
 
     var circle_child = child + 1;
     $("#svg_form_time rect:nth-of-type(n + " + child + ")").css(

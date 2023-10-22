@@ -13,7 +13,8 @@ import { questions } from './questions/Questions';
 import { questions_english } from './questions/Questions_EN';
 import { text } from './text/Text';
 import { text_english } from './text/Text_EN';
-import colorsImage from './images/0_connection_between_emotions_and_colors.png' 
+import colorsImage from './images/0_connection_between_emotions_and_colors.png'
+import txtPeopleCounter from './txtPeopleCounter.json'; 
 
 var updatedQuestions = questions;
 var updatedText = text;
@@ -33,6 +34,7 @@ function App({peopleCounter }) {
       setENGLISH(updatedQuestions, updatedText);
     };
 
+    
   return (
     <div>
       {/*<img src={colorsImage} className='colors_image'></img>*/}

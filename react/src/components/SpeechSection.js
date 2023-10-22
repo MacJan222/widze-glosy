@@ -42,22 +42,22 @@ function SpeechSection({questions, peopleCounter}) {
             </div>
             <br/><hr /><br/>
             <div>
-              <h3>Wybierz pasującą do nagrania emocję:</h3>
-              <select value={selectedOption} onChange={handleSelectChange}>
-                <option value=""disabled>wybierz emocję</option>
-                <option value="neutralny">neutralny</option>
-                <option value="szczęście">szczęście</option>
-                <option value="smutek">smutek</option>
-                <option value="złość">złość</option>
-                <option value="strach">strach</option>
-                <option value="niesmak">niesmak</option>
+              <h3>{questions.emotion}</h3>
+              <select className="choose_emotion" name="emotion" value={selectedOption} onChange={handleSelectChange}>
+                <option value=""disabled>{questions.emotion0}</option>
+                <option value="neutral">{questions.emotion1}</option>
+                <option value="happy">{questions.emotion2}</option>
+                <option value="sad">{questions.emotion3}</option>
+                <option value="angry">{questions.emotion4}</option>
+                <option value="fear">{questions.emotion5}</option>
+                <option value="disgust">{questions.emotion6}</option>
               </select>
               {/* <p>Wybrana emocja: {selectedOption}</p> */}
             </div>
             
             <div className="reset_color" id="c_reset">Reset</div> 
             <div className="warning_info">
-               Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej.
+              {questions.warning}
             </div>
             </div>
         </div>

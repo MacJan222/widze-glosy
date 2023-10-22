@@ -5,7 +5,7 @@ export const text_english = [
     h2: '...', 
     h3: '...', 
     p1: 'Agree and send application', 
-    p2: '...',
+    p2: 'Fill application again',
     p3: '...',
     p4: '...',
     p5: '...'
@@ -78,5 +78,16 @@ export const text_english = [
     p3: 'I don\'t know',
     p4: '...',
     p5: 'Please answer the quesitons.'
+},
+{ 
+  id: 7, 
+  export_name: 'StudentsIntro',
+  h2: '...', 
+  h3: 'Thank you for answering the questions!', 
+  p1: '',
+  p2: 'The obtained results will help us in our research work.', 
+  p3: 'If youy are interested you can fill the survey again ❤️',
+  p4: '',
+  p5: '...'
 },
 ];
