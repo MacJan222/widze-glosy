@@ -5,7 +5,7 @@ export const text = [
         h2: '...', 
         h3: '...', 
         p1: 'Zgoda i przesłanie ankiety', 
-        p2: '...',
+        p2: 'Wypełnić ankietę jeszcze raz',
         p3: '...',
         p4: '...',
         p5: '...'
@@ -13,7 +13,7 @@ export const text = [
     { 
       id: 1, 
       export_name: 'Header',
-      h2: 'Analiza powiązań emocji i dzwięków z kolorami', 
+      h2: 'Analiza powiązań emocji i dźwięków z kolorami', 
       h3: '...', 
       p1: '...', 
       p2: '...',
@@ -27,9 +27,9 @@ export const text = [
       h2: '...', 
       h3: 'Dzień dobry,', 
       p1: 'jesteśmy studentami II stopnia na Politechnice Gdańskiej i realizujemy projekt badawczy. ',
-      p2: 'Zbieramy informacje o tym, jakie skojarzenia emocji i dzwięków z kolorami mają osoby o różnych charakterystykach.', 
-      p3: 'Dana ankieta nie zajmie więcej niż 3 minuty a pytania są anonimowe, łatwe i przyjemne :)',
-      p4: 'Więc serdecznie zapraszamy do jej wypełnienia ❤️',
+      p2: 'Zbieramy informacje dotyczące relacji pomiędzy dźwiękiem, emocją zawartą w głosie i kolorem.', 
+      p3: 'Szacowany czas wypełnienia ankiety wynosi około 10 minut, a pytania są anonimowe, łatwe i przyjemne :)',
+      p4: 'Dlatego serdecznie zapraszamy do jej wypełnienia ❤️',
       p5: '...'
     },
     { 
@@ -78,6 +78,17 @@ export const text = [
       p3: 'Nie wiem',
       p4: '...',
       p5: 'Proszę odpowiedzieć na pytania.'
+  },
+  { 
+    id: 7, 
+    export_name: 'StudentsIntro',
+    h2: '...', 
+    h3: 'Dziękujemy za wypełnienie ankiety!', 
+    p1: '',
+    p2: 'Uzyskane wyniki pomogą nam w naszej pracy badawczej.', 
+    p3: 'Jeżeli chcą Państwo wypełnić ankietę jeszcze raz, zapraszamy ❤️',
+    p4: '',
+    p5: '...'
   },
   ];
   

@@ -6,19 +6,20 @@ import Header from './components/Header';
 import StudentsIntro from './components/StudentsIntro';
 import ColorButton from './components/ColorButton';
 import ColorPicker from './components/ColorPicker';
-import AudioSection from './components/AudioSection';
+import AudioSection from './components/SpeechSection';
 import reportWebVitals from './reportWebVitals';
 import backImage from './images/0_connection_between_emotions_and_colors.png';
 import $ from 'jquery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+let peopleCounter = 1;
 
 
 //TA FUNKCJA JEST OD WSZYSTKIEGO (TAK JAKBY OD STRONY I OD BUTTONÓW)
 $( document ).ready(function() {
   var base_color = "rgb(230,230,230)"; // KOLOR NIEWYPEŁNIONYCH KÓŁECZEK NA GÓRZE
   var active_color = "rgb(237, 40, 70)"; // zielony od buttonów: 0, 170, 105     KOLOR WYPEŁNIONYCH NA CZERWONO KÓŁECZEK NA GÓRZE
+  var submitted_color = "#6bb834";
   
   var isColorSelected = true;
   var counter = 0;
@@ -28,8 +29,7 @@ $( document ).ready(function() {
   var selectedSex = [];
   var selectedAge = [];
   var selectedDisease = [];
-
-
+  var isSurveyFinished = false;
 
   $('.colors_appears').hide();
   $('.color-picker-container').show();
@@ -154,6 +154,7 @@ var colorsMatrix = [
   var length = $("section").length - 1;
   $("#prev").addClass("disabled");
   $("#submit").addClass("disabled");
+  $('#again').addClass("disabled");
   
   $("section").not("section:nth-of-type(1)").hide();
   $("section").not("section:nth-of-type(1)").css('transform','translateX(100px)');
@@ -171,6 +172,7 @@ var colorsMatrix = [
     for (var k in attrs) el.setAttribute(k, attrs[k]);
     return el;
   }
+  /* GDYBYM CHCIAŁA USUNĄĆ JEDNO KÓŁECZKO NA GÓRZE TO length-1 */
   for (var i = 0; i < length; i++) {
     var positionX = 12 + i * 200;
     var rect = makeSVG("rect", { x: positionX, y: 9, width: 200, height: 6 });
@@ -179,7 +181,7 @@ var colorsMatrix = [
     var circle = makeSVG("circle", {
       cx: positionX,
       cy: 12,
-      r: 12,
+      r: 30,
       width: positionX,
       height: 6
     });
@@ -189,7 +191,7 @@ var colorsMatrix = [
   var circle = makeSVG("circle", {
     cx: positionX + 200,
     cy: 12,
-    r: 12,
+    r: 30,
     width: positionX,
     height: 6
   });
@@ -263,6 +265,10 @@ var colorsMatrix = [
     document.querySelectorAll('audio').forEach(el => el.pause());
     document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
     document.body.style.backgroundColor = "white";
+
+    // dodane, żeby po przejściu na kolejną stronę pokazywała się ona od góry
+    window.scrollTo(0, 0);
+    
     //document.body.style.backgroundImage = "backImage";
     
     //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR
@@ -279,7 +285,7 @@ var colorsMatrix = [
     var id = $(this).attr("id");
     if (id === "next" && isColorSelected === true) {
       $("#prev").removeClass("disabled");
-      if (child >= length) {
+      if (child >= length-1) {
         $(this).addClass("disabled");
         $('#submit').removeClass("disabled"); // wyzwolić jeśli przeszedłeś wszystkie pytania
       }
@@ -299,6 +305,7 @@ var colorsMatrix = [
     } else if (id === "prev") {
       $("#next").removeClass("disabled");
       $('#submit').addClass("disabled");
+      $('#again').addClass("disabled");
       if (child <= 2) {
         $(this).addClass("disabled");
       }
@@ -309,9 +316,28 @@ var colorsMatrix = [
         }
         child--;
         $('.warning_info').hide();
-      }
-      
+      }      
     }
+
+    if(id === "submit")
+    {
+      child++;
+      $('#next').addClass("disabled");
+      $('#prev').addClass("disabled");
+      $('#submit').addClass("disabled");
+      $('#again').removeClass("disabled");
+      $('#svg_form_time rect').css('fill',submitted_color);
+      $('#svg_form_time circle').css('fill',submitted_color);
+      $("circle:nth-of-type(1)").css("fill", submitted_color);
+      isSurveyFinished = true;
+    }
+    if(id === "again")
+    {
+      window.location.reload();
+      isSurveyFinished = false;
+      peopleCounter = peopleCounter+1;
+    }
+
     counter = 0;
     $('.choose_color_button1').css({
       backgroundColor: colorsMatrix[rows][0],
@@ -355,7 +381,7 @@ var colorsMatrix = [
 
 root.render(
   <React.StrictMode>
-    <App />
+    <App peopleCounter={peopleCounter}/>
   </React.StrictMode>
   
 );
