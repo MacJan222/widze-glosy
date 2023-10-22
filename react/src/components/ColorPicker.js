@@ -52,6 +52,15 @@ function ColorPicker() {
             {/*<li className="subswatch-5" data-tooltip="green waterloo" />*/}
           </ul>
         </div>
+        <div className="swatch-ne">
+          <ul>
+            <li className="subswatch-1" data-tooltip="link newh" />
+            <li className="subswatch-2" data-tooltip="neli" />
+            <li className="subswatch-3 centered" data-tooltip="neno" />
+            <li className="subswatch-4" data-tooltip="neda" />
+            {/*<li className="subswatch-5" data-tooltip="black pearl" />*/}
+          </ul>
+        </div>
         <div className="swatch-al">
           <ul>
             <li className="subswatch-1" data-tooltip="link water" />
