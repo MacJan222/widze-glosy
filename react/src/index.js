@@ -376,6 +376,7 @@ var colorsMatrix = [
     
     outputVector[3] = colorsMatrix;
     outputVector[4] = emotionsMatrix;
+    outputVector[5] = peopleCounter;
     console.log(outputVector);
 
     var circle_child = child + 1;
