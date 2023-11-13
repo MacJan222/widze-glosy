@@ -9,7 +9,7 @@ html {
   h2, h3, p, .choose_color_button1, .choose_color_button2, .choose_color_button3, .rad-label {
     scale: 0.90;
   }
-
+  
   .color-picker, .button {
     scale: 0.8;
   }
@@ -18,10 +18,6 @@ html {
     r: 40;
   }
 
-  .reset_color {
-    margin-left: 75%;
-    margin-bottom: 3%;
-  }
 
   section {
     margin: 5% 5% 2%;
@@ -34,10 +30,6 @@ html {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 800px) {
-  .reset_color {
-    margin-left: 80%;
-    margin-bottom: 2%;
-  }
 
   section {
     margin: 5% 5% 2%;
@@ -50,10 +42,6 @@ html {
 }
 
 @media only screen and (min-width: 800px) {
-   .reset_color {
-    margin-left: 85%;
-    scale: 1.2;
-  }
 
   #poland, #united-kingdom {
     scale: 1.5;
@@ -63,6 +51,9 @@ html {
     scale: 1.2;
     max-width: fit-content;
     position: relative;
+    /*text-shadow: 0px 0px 2px rgb(255, 255, 255) ; TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
+    max-width: 600px;
+    margin: 0 auto 2%;
   }
 
   .audio-container, .color-picker {
@@ -80,36 +71,38 @@ html {
   }
 }
 
-h2{
+h1, h2, h3, h4, h5, h6, p, .choose_emotion{
   font-weight:400;
   padding-top:0;
   margin-top:0;
   color: rgb(0, 0, 0);
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Comic Sans MS', cursive;
 }
 
-.header-name {
-  text-shadow: 0px 0px 2px rgb(255, 255, 255) ; /*TUTAJ MOŻNA ZMIENIAĆ CIEŃ headeru - napisu na samej górze*/
-  max-width: 600px;
-  margin: 0 auto 2%;
+.choose_emotion{
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 150px;
+  height: 30px;
+  border-radius: 30px;
+  border-color: transparent;
+  box-shadow:0px 2px 5px rgba(143, 143, 143, 0.5);
+  text-align: center;
+  background-color:rgba(241, 241, 241, 0.493);
 }
 
-
-h3{
-  font-weight:400;
-  padding-top:0;
-  margin-top:0;
-  color: rgb(0, 0, 0);
-  font-family: 'Roboto Slab', serif;
+.choose_emotion select{
+  border-radius: 30px;
+  border-color: transparent;
 }
 
-
-p{
-  text-align:justify;
-  margin-top:0;
-  color: rgb(31, 31, 31);
-  font-family: 'Roboto Slab', serif;
+.choose_emotion option {
+  padding: 20px; /* Dodaj dodatkowe wypełnienie */
+  background-color: rgba(241, 241, 241, 0);
+  color: rgb(95, 95, 95);
+  text-align: center;
 }
+
 
 #svg_form_time {
   height: 20px;
@@ -126,7 +119,7 @@ p{
 
 .button {
   background: rgb(27, 170, 103);
-  border-radius: 5px;
+  border-radius: 50px;
   padding: 0 20px 9px;
   display: inline-block;
   margin: 1% 2%;
@@ -149,7 +142,7 @@ section {
   background:rgba(255, 255, 255, 0.664);
   backdrop-filter:blur(10px);
   box-shadow:0px 2px 10px rgba(0,0,0,0.3);
-  border-radius:5px;
+  border-radius:30px;
   transition:transform 0.2s ease-in-out;
 }
 
@@ -157,34 +150,42 @@ section {
   text-align:justify;
   margin-top:0;
   color: rgb(255, 50, 60);
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Comic Sans MS', cursive;
 }
 
 .colors_image{
-  width: 100%; /* Set the desired width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto; 
 }
 
 #poland{
-  width: 40px;
-  height: 25px;
-  /*padding: 18px 28px;*/
+  width: 45px;
+  height: 30px;
   background-image: url(images/poland.png);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: 110%;
+  border-radius:20px;
+  border-width: 1px;
+  border-color: transparent;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  /*padding: 18px 28px;*/
   float: inherit;
   cursor: pointer;
   margin: 1% 2%;
 }
 
 #united-kingdom{
-  width: 40px;
-  height: 25px;
+  width: 45px;
+  height: 30px;
+  border-radius:20px;
+  border-width: 1px;
+  border-color: transparent;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   /*padding: 18px 28px;*/
   background-image: url(images/united-kingdom.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 110%;
   background-position: center;
   float: inherit;
   cursor: pointer;
@@ -198,22 +199,21 @@ input[type=text] {
   display: inline-block;
   padding: 12px 25px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid lightgrey;
   font-size: 1em;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Comic Sans MS', cursive;
   background:white;
 }
 
 
-/*CSS OD RADIO BUTTONÓW*/
 .rad-label {
   display: flex;
   align-items: center;
 
   border-radius: 100px;
-  padding: 1% 7%;
-  margin: 3%;
+  padding: 1% 3%;
+
 
   cursor: pointer;
   transition: .3s;
@@ -221,11 +221,12 @@ input[type=text] {
 
 .rad-label:hover,
 .rad-label:focus-within {
-  background: hsla(152, 100%, 90%, 0.14);
+  background: hsla(140, 98%, 65%, 0.342);
 }
 
 .rad-input {
   position: inherit;
+  align-items: center;
   left: 0;
   top: 0;
   width: 1px;
@@ -238,7 +239,7 @@ input[type=text] {
   width: 22px;
   height: 22px;
   border-radius: 100px;
-  background: linear-gradient(to right bottom, hsla(152, 100%, 90%, 0.14), hsla(221, 95%, 61%, 0.432)); /*KOLORKI PRZYCISKÓW - GRADIENT W SEKCJI 1*/
+  background: linear-gradient(to right bottom, rgba(33, 186, 66, 0.527), hsl(135, 70%, 43%)); /*KOLORKI PRZYCISKÓW - GRADIENT W SEKCJI 1*/
   position: relative;
 }
 
@@ -248,7 +249,7 @@ input[type=text] {
   width: inherit;
   height: inherit;
   border-radius: inherit;
-  background: hsl(152, 68%, 96%);
+  background: hsl(0, 0%, 92%);
   transform: scale(1.1);
   transition: .3s;
 }
@@ -260,11 +261,8 @@ input[type=text] {
 .rad-text {
   color: hsl(0, 0%, 33%);
   margin-left: 14px;
-  /*letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 900;*/
-  font-size: 20px;
-  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-family: 'Comic Sans MS', cursive;
   transition: .3s;
 }
 
@@ -273,14 +271,12 @@ input[type=text] {
 }
 
 
-
-
 /*CSS OD KOLORKÓW*/
 
 body {
   /*background: #ffffff; /*DOMYŚLNE TŁO APKI*/
   background-image: "./images/kisspng-color-circle-graphic-design-vector-color-circle-decorative-pattern-5aae8dd4b3af89.101224301521389012736.png";
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Comic Sans MS', cursive;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -313,28 +309,6 @@ div {
   box-sizing: border-box;
 }
 
-/* NA RAZIE NIE POTRZEBUJEMY PAHE HEADERÓW
-.page-header {
-  font-size: 2.4em;
-  text-align: center;
-  z-index: 99;
-}
-.page-header h1 {
-  display: inline-block;
-  font-size: 58px;
-  border-bottom: 3px solid #fff;
-  color: #ffffff;
-  line-height: 1.1;
-}
-.page-header h1 span {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-}
-
-.page-content {
-  padding: 0 2em;
-}*/
-
-
 .page-footer {
   flex-grow: 1;
 }
@@ -360,8 +334,8 @@ div {
 
 
 audio {
-  width: 300px;
-  height: 55px;
+  width: 350px;
+  height: 40px;
   /*background-color: #ffffff;*/
   background-color: rgba(240, 240, 240, 0.26);
   border-radius: 30px;
@@ -381,8 +355,8 @@ audio::-webkit-media-controls-panel {
 }
 
 .reset_color{
-  background:  rgba(241, 241, 241, 0.619);
-  border-radius: 9%;
+  background:  rgba(241, 241, 241, 0.493);
+  border-radius: 20px;
   /*border: 0.5px solid #000000;*/
   padding-top: 6px;
   padding-left: 2px;
@@ -394,8 +368,11 @@ audio::-webkit-media-controls-panel {
   box-shadow: 0 0px 10px rgba(146, 146, 146, 0.49);
   cursor: pointer;
   margin-top: 5%;
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
 }
-
 
 
 .color-picker-container {
@@ -406,7 +383,7 @@ audio::-webkit-media-controls-panel {
 }
 
 .choose_color_button1{
-  background:  rgb(241, 241, 241);
+  background:  rgba(241, 241, 241, 0.493);
   border-radius: 100%;
   /*border: 0.5px solid #000000;*/
   padding: 20px;
@@ -417,12 +394,12 @@ audio::-webkit-media-controls-panel {
   color: #000000;
   font-size: smaller;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  box-shadow:0px 2px 8px rgba(143, 143, 143, 0.5);
   padding-top: 30px;
   cursor: pointer;
 }
 .choose_color_button2{
-  background: rgb(241, 241, 241);;
+  background: rgba(241, 241, 241, 0.493);
   border-radius: 100%;
   /*border: 1px solid #000000;*/
   padding: 20px;
@@ -431,12 +408,12 @@ audio::-webkit-media-controls-panel {
   color: #000000;
   font-size: smaller;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  box-shadow:0px 2px 8px rgba(143, 143, 143, 0.5);
   padding-top: 30px;
   cursor: pointer;
 }
 .choose_color_button3{
-  background: rgb(241, 241, 241);
+  background: rgba(241, 241, 241, 0.493);
   border-radius: 100%;
   /*border: 1px solid #000000;*/
   padding: 20px;
@@ -447,7 +424,7 @@ audio::-webkit-media-controls-panel {
   color: #000000;
   font-size: smaller;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  box-shadow:0px 2px 8px rgba(143, 143, 143, 0.5);
   padding-top: 30px;
   cursor: pointer;
 }
@@ -458,7 +435,7 @@ audio::-webkit-media-controls-panel {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 0 100em rgba(34, 34, 34, 0.384), 0 10px 40px rgba(0, 0, 0, 0.4); /*to pierwsze rgba było rgba(34, 34, 34, 0.9) i jest odpowiedzialne za całe tło*/
-  border-radius: 3px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
+  border-radius: 30px; /*DRUGIE GRBA ODPOWIADA ZA SHADOW BOXA W KTÓRYM SĄ KÓŁECZKA*/
   /*transition: opacity 0.3s;*/
 }
 .card .spacer {

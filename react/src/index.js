@@ -42,6 +42,12 @@ $( document ).ready(function() {
   $('.colors_appears').hide();
   $('.color-picker-container').show();
   $('.warning_info').hide();
+  $('.reset_color').show();
+  $('.header-name').css({
+    color: "black"
+  });
+  $('#poland').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
+  $('#united-kingdom').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
 
 $('.rad-input[name="sex"]').on('change', function() {
   selectedSex = $('input[name="sex"]:checked').val();
@@ -61,22 +67,22 @@ $('.rad-input[name="disease"]').on('change', function() {
 
 
 var colorsMatrix = [
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"],
-  ["hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)", "hsla(0, 0%, 60%, 0.14)"]
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"],
+  ["rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)", "rgba(241, 241, 241, 0.493)"]
 ];
 
 
@@ -147,6 +153,34 @@ var colorsMatrix = [
       $('.color-name').empty().append(selectedSwatchName);
       $('.colors_appears').hide();
       $('.color-picker-container').show();
+      $('.reset_color').show();
+
+      if (selectedColor === "rgb(238, 0, 18)"){
+        $('#poland').css('box-shadow', '0 5px 6px rgba(251, 251, 251, 0.534');
+        $('#united-kingdom').css('box-shadow', '0 5px 6px rgba(251, 251, 251, 0.534');
+      }  
+      else{
+        $('#poland').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
+        $('#united-kingdom').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
+      }
+
+      if((selectedColor === "rgb(82, 26, 99)") || 
+      (selectedColor === "rgb(28, 55, 126)") || 
+      (selectedColor === "rgb(61, 105, 30)") ||
+      (selectedColor === "rgb(151, 127, 1)") ||
+      (selectedColor === "rgb(150, 81, 1)") ||
+      (selectedColor === "rgb(136, 0, 10)") ||
+      (selectedColor === "rgb(0, 0, 0)") ||
+      (selectedColor === "rgb(28, 111, 126)")){
+        $('.header-name').css({
+          color: "white"
+        });
+      }
+      else{
+        $('.header-name').css({
+          color: "black"
+        });
+      }
     }, 500);
     setTimeout(function() {
       $('.ripple').removeClass('scaling');
@@ -220,14 +254,14 @@ var colorsMatrix = [
     document.querySelectorAll('audio').forEach(el => el.pause());
     document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
     counter = 0;
-    colorsMatrix[rows][0] = "hsla(0, 0%, 60%, 0.14)";
-    colorsMatrix[rows][1] = "hsla(0, 0%, 60%, 0.14)";
-    colorsMatrix[rows][2] = "hsla(0, 0%, 60%, 0.14)";
+    colorsMatrix[rows][0] = "rgba(241, 241, 241, 0.493)";
+    colorsMatrix[rows][1] = "rgba(241, 241, 241, 0.493)";
+    colorsMatrix[rows][2] = "rgba(241, 241, 241, 0.493)";
     document.body.style.backgroundColor = "white";
     $('.colors_appears').hide();
     $('.warning_info').hide();
     $('.color-picker-container').show();
-
+    $('.reset_color').show();
     $('.choose_color_button1').css({
       backgroundColor: colorsMatrix[rows][0],
       border: "0 4px 10px rgba(0, 0, 0, 0.35"
@@ -240,6 +274,12 @@ var colorsMatrix = [
       backgroundColor: colorsMatrix[rows][2],
       border: "0 4px 10px rgba(0, 0, 0, 0.35"
     });
+    $('.choose_emotion').val('');
+    $('.header-name').css({
+      color: "black"
+    });
+    $('#poland').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
+    $('#united-kingdom').css('box-shadow', '0 5px 6px rgba(0, 0, 0, 0.1)');
   });
 
 
@@ -250,6 +290,7 @@ var colorsMatrix = [
     $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
     $('.colors_appears').show();
     $('.color-picker-container').hide();
+    $('.reset_color').hide();
   });
   $(".choose_color_button2").click(function () {
     counter = 2;
@@ -258,6 +299,7 @@ var colorsMatrix = [
     $('.choose_color_button3').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
     $('.colors_appears').show();
     $('.color-picker-container').hide();
+    $('.reset_color').hide();
   });
   $(".choose_color_button3").click(function () {
     counter = 3;
@@ -266,6 +308,7 @@ var colorsMatrix = [
     $('.choose_color_button2').css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.35');*/
     $('.colors_appears').show();
     $('.color-picker-container').hide();
+    $('.reset_color').hide();
   });
 
 
@@ -286,7 +329,7 @@ var colorsMatrix = [
     //document.body.style.backgroundImage = "backImage";
     
     //TRIGGER NIE POZWALAJĄCY NA DALSZE PÓJŚCIE PÓKI NIE WYBIERZE SIĘ CO NAJMNIEJ JEDEN KOLOR ORAZ EMOCJĘ
-    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0 && selectedDisease.length !== 0)|| (emotionsMatrix[rows] !== 0 && (colorsMatrix[rows][0] !== 'hsla(0, 0%, 60%, 0.14)'|| colorsMatrix[rows][1] !== 'hsla(0, 0%, 60%, 0.14)' || colorsMatrix[rows][2] !== 'hsla(0, 0%, 60%, 0.14)'))){
+    if(child === 1 || (child === 2 && selectedSex.length !== 0 && selectedAge.length !== 0 && selectedDisease.length !== 0)|| (emotionsMatrix[rows] !== 0 && (colorsMatrix[rows][0] !== 'rgba(241, 241, 241, 0.493)'|| colorsMatrix[rows][1] !== 'rgba(241, 241, 241, 0.493)' || colorsMatrix[rows][2] !== 'rgba(241, 241, 241, 0.493)'))){
       isColorSelected = true;
       isEmotionSelected = true;
       $('.warning_info').hide();

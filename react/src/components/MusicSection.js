@@ -1,9 +1,8 @@
 import React, { useState} from 'react';
 import ColorPicker from './ColorPicker';
 
-function MusicSection({questions}) {
+function MusicSection({questions, peopleCounter}) {
 
-  var people_counter = 1;
   var isSurveyFinished = false;
 
   const [selectedOption, setSelectedOption] = useState(''); // Ustaw pustą wartość
@@ -26,10 +25,23 @@ function MusicSection({questions}) {
             <br />  
             <h3>{questions.quest}</h3> 
             {/*questions.audio   '../audio_emoji/Goblin.mp3'  */  }
-            <hr /><br/>
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center' }}>{/*  style={{ display: 'flex', alignItems: 'center' }} */}
+              <h3>{questions.emotion}</h3>
+              <select className="choose_emotion" name="emotion" value={selectedOption} onChange={handleSelectChange}>
+                <option value="" disabled>{questions.emotion0}</option>
+                <option value="neutral">{questions.emotion1}</option>
+                <option value="happy">{questions.emotion2}</option>
+                <option value="sad">{questions.emotion3}</option>
+                <option value="angry">{questions.emotion4}</option>
+                <option value="fear">{questions.emotion5}</option>
+                <option value="disgust">{questions.emotion6}</option>
+              </select>
+            </div>
+              <br/>     
             <div className="audio-container">
               <audio id = "idAudio" controls>
-                <source src={require('../audio_emoji/' + people_counter + '/music/' + questions.audio)} type="audio/mpeg" />
+                <source src={require('../audio_emoji/' + peopleCounter + '/music/' + questions.audio)} type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
@@ -43,28 +55,17 @@ function MusicSection({questions}) {
             <div className = "colors_appears">
               <ColorPicker />
             </div>
-            <br/><hr /><br/>
-            <div>
-              <h3>Wybierz pasującą do nagrania emocję:</h3>
-              <select className="choose_emotion" name="emotion" onChange={handleSelectChange}>
-                <option disabled>
-                  wybierz emocję
-                </option>
-                <option value="neutralny">neutralny</option>
-                <option value="szczęście">szczęście</option>
-                <option value="smutek">smutek</option>
-                <option value="złość">złość</option>
-                <option value="strach">strach</option>
-                <option value="niesmak">niesmak</option>
-              </select>
-              {/* <p>Wybrana emocja: {selectedOption}</p> */}
+            <br/>
+
+              <div className="reset_color"> 
+              <div id="c_reset">Reset</div> 
             </div>
-            
-            <div className="reset_color" id="c_reset">Reset</div> 
+            <br/>
             <div className="warning_info">
-               Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej.
+              {questions.warning}
             </div>
             </div>
+            <br/>
         </div>
       </div>      
     </section>

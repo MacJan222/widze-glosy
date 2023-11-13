@@ -23,7 +23,20 @@ function SpeechSection({questions, peopleCounter}) {
             <br />  
             <h3>{questions.quest}</h3> 
             {/*questions.audio   '../audio_emoji/Goblin.mp3'  */  }
-            <hr /><br/>
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center' }}>{/*  style={{ display: 'flex', alignItems: 'center' }} */}
+              <h3>{questions.emotion}</h3>
+              <select className="choose_emotion" name="emotion" value={selectedOption} onChange={handleSelectChange}>
+                <option value="" disabled>{questions.emotion0}</option>
+                <option value="neutral">{questions.emotion1}</option>
+                <option value="happy">{questions.emotion2}</option>
+                <option value="sad">{questions.emotion3}</option>
+                <option value="angry">{questions.emotion4}</option>
+                <option value="fear">{questions.emotion5}</option>
+                <option value="disgust">{questions.emotion6}</option>
+              </select>
+            </div>
+              <br/>           
             <div className="audio-container">
               <audio id = "idAudio" controls>
                 <source src={require('../audio_emoji/' + peopleCounter + '/speech/' + questions.audio)} type="audio/mpeg" />
@@ -40,25 +53,16 @@ function SpeechSection({questions, peopleCounter}) {
             <div className = "colors_appears">
               <ColorPicker />
             </div>
-            <br/><hr /><br/>
-            <div>
-              <h3>{questions.emotion}</h3>
-              <select className="choose_emotion" name="emotion" value={selectedOption} onChange={handleSelectChange}>
-                <option value=""disabled>{questions.emotion0}</option>
-                <option value="neutral">{questions.emotion1}</option>
-                <option value="happy">{questions.emotion2}</option>
-                <option value="sad">{questions.emotion3}</option>
-                <option value="angry">{questions.emotion4}</option>
-                <option value="fear">{questions.emotion5}</option>
-                <option value="disgust">{questions.emotion6}</option>
-              </select>
-              {/* <p>Wybrana emocja: {selectedOption}</p> */}
-            </div>
+           
             
-            <div className="reset_color" id="c_reset">Reset</div> 
+            <div className="reset_color"> 
+              <div id="c_reset">Reset</div> 
+            </div>
+            <br/>
             <div className="warning_info">
               {questions.warning}
             </div>
+            <br/>
             </div>
         </div>
       </div>      

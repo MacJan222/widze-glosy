@@ -28,7 +28,7 @@ export const text = [
       h3: 'Dzień dobry,', 
       p1: 'jesteśmy studentami II stopnia na Politechnice Gdańskiej i realizujemy projekt badawczy. ',
       p2: 'Zbieramy informacje dotyczące relacji pomiędzy dźwiękiem, emocją zawartą w głosie i kolorem.', 
-      p3: 'Szacowany czas wypełnienia ankiety wynosi około 10 minut, a pytania są anonimowe, łatwe i przyjemne :)',
+      p3: 'Szacowany czas wypełnienia ankiety wynosi około 10 minut, a pytania są anonimowe, łatwe i przyjemne :) ',
       p4: 'Dlatego serdecznie zapraszamy do jej wypełnienia ❤️',
       p5: '...'
     },
@@ -40,7 +40,7 @@ export const text = [
         h3: 'Proszę zaznaczyć swoją płeć', 
         p1: 'Mężczyzna', 
         p2: 'Kobieta',
-        p3: 'Inne',
+        p3: 'Inna odpowiedź',
         p4: '...',
         p5: 'Proszę odpowiedzieć na pytania.'
     },
@@ -49,11 +49,14 @@ export const text = [
         export_name: 'BasicInformation2',
         h2: '...', 
         h3: 'Proszę zaznaczyć swoją grupę wiekową', 
-        p1: '0 - 20', 
-        p2: '21 - 40',
-        p3: '41 - 60',
-        p4: '60+',
-        p5: 'Proszę odpowiedzieć na pytania.'
+        p1: '18 <', 
+        p2: '18 - 25',
+        p3: '26 - 35',
+        p4: '36 - 45',
+        p6: '46 - 55',
+        p7: '56 - 65',
+        p8: '66 >',
+        p5: 'Proszę odpowiedzieć na pytania'
     },
     { 
         id: 5, 
@@ -61,7 +64,7 @@ export const text = [
         h21: 'Sekcja 4', 
         h22: 'Zgoda na przetwarzanie danych (RODO)', 
         h3: '...',
-        p1: 'Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu [CEL ZBIERANIA DANYCH] przez [DANE FIRMY] oraz przez podmioty trzecie.', 
+        p1: 'Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu [CEL ZBIERANIA DANYCH] przez [DANE FIRMY] oraz przez podmioty trzecie', 
         p2: '...',
         p3: '...',
         p4: '...',
@@ -77,7 +80,7 @@ export const text = [
       p2: 'Nie',
       p3: 'Nie wiem',
       p4: '...',
-      p5: 'Proszę odpowiedzieć na pytania.'
+      p5: 'Proszę odpowiedzieć na pytania'
   },
   { 
     id: 7, 

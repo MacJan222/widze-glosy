@@ -3,7 +3,7 @@ export const questions_english = [
     id: 1, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 1/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "001.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -13,13 +13,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 2, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 2/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "002.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -29,13 +29,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 3, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 3/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "003.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -45,13 +45,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 4, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 4/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "004.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -61,13 +61,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 5, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 5/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "005.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -77,13 +77,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 6, 
     section: 'Section 2', 
     section_name: 'The connection between speech, emotions and colors 6/6', 
-    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the speech in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "006.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -93,7 +93,7 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
 
 
@@ -104,8 +104,8 @@ export const questions_english = [
   { 
     id: 7, 
     section: 'Section 3', 
-    section_name: 'The connection between music, emotions and colors 1/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    section_name: 'The connection between music, emotions and colors 1/5', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "001.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -115,13 +115,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 8, 
     section: 'Section 3', 
-    section_name: 'The connection between music, emotions and colors 2/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    section_name: 'The connection between music, emotions and colors 2/5', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "002.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -131,13 +131,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 9, 
     section: 'Section 3', 
-    section_name: 'The connection between music, emotions and colors 3/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    section_name: 'The connection between music, emotions and colors 3/5', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "003.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -147,13 +147,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 10, 
     section: 'Section 3', 
-    section_name: 'The connection between music, emotions and colors 4/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    section_name: 'The connection between music, emotions and colors 4/5', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "004.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -163,13 +163,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 11, 
     section: 'Section 3', 
-    section_name: 'The connection between music, emotions and colors 5/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    section_name: 'The connection between music, emotions and colors 5/5', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "005.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -179,13 +179,13 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
     { 
     id: 12, 
     section: 'Section 3', 
     section_name: 'The connection between music, emotions and colors 6/6', 
-    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3).', 
+    quest: 'What color and emotion do you associate with the music in this soundtrack? Please choose emotion and min 1 color (max 3)', 
     audio: "006.mp3",
     emotion: "Choose emotion that suits the audio most",
     emotion0:"choose emotion",
@@ -195,7 +195,7 @@ export const questions_english = [
     emotion4:"angry",
     emotion5:"fear",
     emotion6:"disgust",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
 
 
@@ -203,49 +203,49 @@ export const questions_english = [
   { 
     id: 13, 
     section: 'Section 4', 
-    section_name: 'The connection between emotions and colors 1/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    section_name: 'The connection between emotions and colors 1/5', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 14, 
     section: 'Section 4', 
-    section_name: 'The connection between emotions and colors 2/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    section_name: 'The connection between emotions and colors 2/5', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 15, 
     section: 'Section 4', 
-    section_name: 'The connection between emotions and colors 3/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    section_name: 'The connection between emotions and colors 3/5', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 16, 
     section: 'Section 4', 
-    section_name: 'The connection between emotions and colors 4/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    section_name: 'The connection between emotions and colors 4/5', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 17, 
     section: 'Section 4', 
-    section_name: 'The connection between emotions and colors 5/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    section_name: 'The connection between emotions and colors 5/5', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
   { 
     id: 18, 
     section: 'Section 4', 
     section_name: 'The connection between emotions and colors 6/6', 
-    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3).', 
+    quest: 'What color do you associate with this emotion? Please choose min 1 color (max 3)', 
     emotion: "Choose emotion that suits the audio most",
-    warning: "Please select an emotion and at least one color to proceed."
+    warning: "Please select an emotion and at least one color to proceed"
   },
 ];

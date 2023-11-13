@@ -42,7 +42,6 @@ function App({peopleCounter }) {
       <button id="poland" onClick={PolandClick}></button>
       <button id="united-kingdom" onClick={EnglandClick}></button>
       <br />
-``
       <StudentsIntro intro = {updatedText[2]}/>
       <BasicInformation1 basic1 = {updatedText[3]} basic2 = {updatedText[4]} basic3 = {updatedText[6]}/>
 
@@ -55,12 +54,12 @@ function App({peopleCounter }) {
       <SpeechSection questions = {updatedQuestions[4]} peopleCounter={peopleCounter}/>
       <SpeechSection questions = {updatedQuestions[5]} peopleCounter={peopleCounter}/>
       {/*ŚPIEW - KOLORY */}
-{/*       <MusicSection questions = {updatedQuestions[6]} peopleCounter={peopleCounter}/>
+       <MusicSection questions = {updatedQuestions[6]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[7]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[8]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[9]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[10]} peopleCounter={peopleCounter}/>
-      <MusicSection questions = {updatedQuestions[11]} peopleCounter={peopleCounter}/> */}
+     {/*} <MusicSection questions = {updatedQuestions[11]} peopleCounter={peopleCounter}/> */}
       
       <Agreement agree = {updatedText[5]}/>
       {/*<StudentsEnd /> SUBMIT PRZEKIERUJE NA INNĄ STRONĘ StudentsEnd*/} 

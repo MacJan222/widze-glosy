@@ -3,7 +3,7 @@ export const questions = [
     id: 1, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 1/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "001.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -13,13 +13,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 2, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 2/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "002.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -29,13 +29,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 3, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 3/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "003.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -45,13 +45,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 4, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 4/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "004.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -61,13 +61,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 5, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 5/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "005.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -77,13 +77,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 6, 
     section: 'Sekcja 2', 
     section_name: 'Powiązanie mowy z kolorami i emocjami 6/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się mowa w tej ścieżce dźwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "006.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -93,7 +93,7 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
 
 
@@ -101,8 +101,8 @@ export const questions = [
   { 
     id: 7, 
     section: 'Sekcja 3', 
-    section_name: 'Powiązanie muzyki z kolorami i emocjami 1/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie muzyki z kolorami i emocjami 1/5', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "001.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -112,13 +112,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 8, 
     section: 'Sekcja 3', 
-    section_name: 'Powiązanie muzyki z kolorami i emocjami 2/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie muzyki z kolorami i emocjami 2/5', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "002.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -128,13 +128,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 9, 
     section: 'Sekcja 3', 
-    section_name: 'Powiązanie muzyki z kolorami i emocjami 3/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie muzyki z kolorami i emocjami 3/5', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "003.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -144,13 +144,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 10, 
     section: 'Sekcja 3', 
-    section_name: 'Powiązanie muzyki z kolorami i emocjami 4/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie muzyki z kolorami i emocjami 4/5', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "004.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -160,13 +160,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 11, 
     section: 'Sekcja 3', 
-    section_name: 'Powiązanie muzyki z kolorami i emocjami 5/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie muzyki z kolorami i emocjami 5/5', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "005.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -176,13 +176,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 12, 
     section: 'Sekcja 3', 
     section_name: 'Powiązanie muzyki z kolorami i emocjami 6/6', 
-    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem i emocją kojarzy Ci się muzyka w tej ścieżce dzwiękowej? Wybierz emocję oraz minimalnie jeden kolor (max 3)', 
     audio: "006.mp3",
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
@@ -192,7 +192,7 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
 
 
@@ -201,8 +201,8 @@ export const questions = [
   { 
     id: 13, 
     section: 'Sekcja 4', 
-    section_name: 'Powiązanie emocji z kolorami 1/6', 
-    quest: 'Z jakim kolorem kojarzy Ci dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie emocji z kolorami 1/5', 
+    quest: 'Z jakim kolorem kojarzy Ci dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
     emotion1:"neutralny",
@@ -211,13 +211,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 14, 
     section: 'Sekcja 4', 
-    section_name: 'Powiązanie emocji z kolorami 2/6', 
-    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie emocji z kolorami 2/5', 
+    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
     emotion1:"neutralny",
@@ -226,13 +226,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 15, 
     section: 'Sekcja 4', 
-    section_name: 'Powiązanie emocji z kolorami 3/6', 
-    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie emocji z kolorami 3/5', 
+    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
     emotion1:"neutralny",
@@ -241,13 +241,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 16, 
     section: 'Sekcja 4', 
-    section_name: 'Powiązanie emocji z kolorami 4/6', 
-    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie emocji z kolorami 4/5', 
+    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
     emotion1:"neutralny",
@@ -256,13 +256,13 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 17, 
     section: 'Sekcja 4', 
-    section_name: 'Powiązanie emocji z kolorami 5/6', 
-    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    section_name: 'Powiązanie emocji z kolorami 5/5', 
+    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
     emotion0:"wybierz emocję",
     emotion1:"neutralny",
@@ -271,7 +271,7 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
   { 
     id: 18, 
@@ -284,8 +284,8 @@ export const questions = [
     emotion4:"złość",
     emotion5:"strach",
     emotion6:"niesmak",
-    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3).', 
+    quest: 'Z jakim kolorem kojarzy Ci się dana emocja? Wybierz minimalnie jeden kolor (max 3)', 
     emotion: "Wybierz pasującą do nagrania emocję:",
-    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej."
+    warning: "Należy wybrać co najmniej jeden kolor oraz zaznaczyć emocję aby przejść dalej"
   },
 ];
