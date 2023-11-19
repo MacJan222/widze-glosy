@@ -322,6 +322,9 @@ var colorsMatrix = [
     document.querySelectorAll('audio').forEach(el => el.pause());
     document.querySelectorAll('audio').forEach(el => el.currentTime = 0);
     document.body.style.backgroundColor = "white";
+    $('.header-name').css({
+      color: "black"
+    });
 
     // dodane, żeby po przejściu na kolejną stronę pokazywała się ona od góry
     window.scrollTo(0, 0);
