@@ -53,14 +53,15 @@ function SpeechSection({questions, peopleCounter}) {
             <div className = "colors_appears">
               <ColorPicker />
             </div>
-           
-            
-            <div className="reset_color"> 
-              <div id="c_reset">Reset</div> 
-            </div>
             <br/>
+            
+           
             <div className="warning_info">
               {questions.warning}
+            </div>
+            <br/>
+            <div className="reset_color"> 
+              <div id="c_reset">Reset</div> 
             </div>
             <br/>
             </div>

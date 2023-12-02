@@ -64,7 +64,7 @@ export const text_english = [
       h21: 'Section 4', 
       h22: 'Consent to the processing of personal data (RODO)', 
       h3: '...',
-      p1: 'I consent to the processing of my personal data provided in the above form for [PURPOSE OF DATA COLLECTION] by [COMPANY DATA] and by third parties', 
+      p1: 'I consent to the processing of my personal data provided in the above form for science research realization by Gdańsk University of Technology and by third parties', 
       p2: '...',
       p3: '...',
       p4: '...',

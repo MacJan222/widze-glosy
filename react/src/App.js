@@ -54,7 +54,7 @@ function App({peopleCounter }) {
       <SpeechSection questions = {updatedQuestions[4]} peopleCounter={peopleCounter}/>
       <SpeechSection questions = {updatedQuestions[5]} peopleCounter={peopleCounter}/>
       {/*ŚPIEW - KOLORY */}
-       <MusicSection questions = {updatedQuestions[6]} peopleCounter={peopleCounter}/>
+      <MusicSection questions = {updatedQuestions[6]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[7]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[8]} peopleCounter={peopleCounter}/>
       <MusicSection questions = {updatedQuestions[9]} peopleCounter={peopleCounter}/>

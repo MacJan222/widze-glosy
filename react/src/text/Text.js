@@ -64,7 +64,7 @@ export const text = [
         h21: 'Sekcja 4', 
         h22: 'Zgoda na przetwarzanie danych (RODO)', 
         h3: '...',
-        p1: 'Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu [CEL ZBIERANIA DANYCH] przez [DANE FIRMY] oraz przez podmioty trzecie', 
+        p1: 'Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu realizacji badania naukowego przez Politechnikę Gdańską oraz przez podmioty trzecie', 
         p2: '...',
         p3: '...',
         p4: '...',

@@ -57,13 +57,14 @@ function MusicSection({questions, peopleCounter}) {
             </div>
             <br/>
 
-              <div className="reset_color"> 
-              <div id="c_reset">Reset</div> 
-            </div>
-            <br/>
+              
             <div className="warning_info">
               {questions.warning}
             </div>
+            </div>
+            <br/>
+            <div className="reset_color"> 
+              <div id="c_reset">Reset</div> 
             </div>
             <br/>
         </div>
