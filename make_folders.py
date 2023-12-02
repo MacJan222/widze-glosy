@@ -5,7 +5,9 @@ from random import shuffle
 
 """
 How to use:
-place the script in the same directory with a directory containing datasets.
+download the 6 datasets from 
+unpack datasets into "datasets" folder in main directory.
+place the script in the the main directory.
 Run the script.
 Generated sample sets are to be found in the output folder.
 """
@@ -41,12 +43,26 @@ tess_happy = glob.glob(f"{ds_path}/TESS/*/*/*happy/*")
 tess_neutral = glob.glob(f"{ds_path}/TESS/*/*/*neutral/*")
 tess_sad = glob.glob(f"{ds_path}/TESS/*/*/*sad/*")
 
-song_angry = ravdess_angry_so
+emotify_angry = glob.glob(f"{ds_path}/emotify/anger/*")
+# emotify_disgust = glob.glob(f"{ds_path}/emotify/disgust/*") not existing
+emotify_fear = glob.glob(f"{ds_path}/emotify/fear/*")
+emotify_happy = glob.glob(f"{ds_path}/emotify/happiness/*")
+emotify_neutral = glob.glob(f"{ds_path}/emotify/neutral/*")
+emotify_sad = glob.glob(f"{ds_path}/emotify/sadness/*")
+
+mirex_v2_angry = glob.glob(f"{ds_path}/mirex_v2/angry/*")
+# mirex_v2_disgust = glob.glob(f"{ds_path}/mirex_v2/disgust/*") not existing
+mirex_v2_fear = glob.glob(f"{ds_path}/mirex_v2/fear/*")
+mirex_v2_happy = glob.glob(f"{ds_path}/mirex_v2/happy/*")
+mirex_v2_neutral = glob.glob(f"{ds_path}/mirex_v2/neutral/*")
+mirex_v2_sad = glob.glob(f"{ds_path}/mirex_v2/sad/*")
+
+song_angry = ravdess_angry_so + emotify_angry + mirex_v2_angry
 song_disgust = ravdess_disgust_so
-song_fear = ravdess_fear_so
-song_happy = ravdess_happy_so
-song_neutral = ravdess_neutral_so
-song_sad = ravdess_sad_so
+song_fear = ravdess_fear_so + emotify_fear + mirex_v2_fear
+song_happy = ravdess_happy_so + emotify_happy + mirex_v2_happy
+song_neutral = ravdess_neutral_so + emotify_neutral + mirex_v2_neutral
+song_sad = ravdess_sad_so + emotify_sad + mirex_v2_sad
 
 speech_angry = cremad_angry + ravdess_angry_sp + tess_angry
 speech_disgust = cremad_disgust + ravdess_disgust_sp + tess_disgust
